@@ -15,13 +15,6 @@ pnpm dev
 pnpm build
 ```
 
-## Deployment
-
-```bash
-# Deploy to Cloudflare Pages
-pnpm deploy
-```
-
 ## Features
 
 - Responsive design
