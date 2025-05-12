@@ -2,7 +2,7 @@
   "name": "astro-website",
   "type": "module",
   "version": "0.0.1",
-  "packageManager": "pnpm@9.10.0",
+  "packageManager": "pnpm@10.10.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -10,6 +10,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.7.10"
+    "astro": "^5.7.12"
   }
 }
