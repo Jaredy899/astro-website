@@ -1,5 +1,5 @@
 # Build stage
-FROM node:20-alpine AS builder
+FROM node:20-slim AS builder
 
 # Install pnpm
 RUN corepack enable && corepack prepare pnpm@latest --activate
@@ -19,18 +19,13 @@ COPY . .
 RUN pnpm build
 
 # Production stage
-FROM node:20-alpine AS runner
+FROM nginx:alpine
 
-WORKDIR /app
+# Copy the built files from builder stage to nginx
+COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Install serve package globally
-RUN npm install -g serve
+# Expose port 80
+EXPOSE 80
 
-# Copy built application from builder stage
-COPY --from=builder /app/dist ./dist
-
-# Expose the port the app runs on
-EXPOSE 4321
-
-# Start the application using serve
-CMD ["serve", "-s", "dist", "-l", "4321"] 
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"]

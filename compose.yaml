@@ -3,5 +3,5 @@ services:
     container_name: website
     image: ghcr.io/jaredy899/astro-website:latest
     ports:
-      - "3000:4321" 
+      - "80:80" 
     restart: unless-stopped
