@@ -1,6 +1,6 @@
 ---
-title: "Star Trek"
-description: "My thoughts about Star Trek."
+title: "5/19 - Captain Picard"
+description: "My thoughts about Captain Picard."
 pubDate: 2025-05-19
 ---
 
