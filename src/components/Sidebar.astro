@@ -41,11 +41,17 @@ const sortedYears = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a
 									{new Date(0, Number(month)).toLocaleString('default', { month: 'long' })}
 								</h4>
 								<ul>
-									{postsByYear[Number(year)][Number(month)].map((post) => (
+									{postsByYear[Number(year)][Number(month)].map((post) => {
+										const pubDate = new Date(post.data.pubDate);
+										const formattedDate = pubDate.toLocaleDateString('en-US'); // MM-DD-YYYY format
+										return (
 										<li>
-											<a href={`/blog/${post.slug}`}>{post.data.title}</a>
+											<a href={`/blog/${post.slug}`}>
+												{post.data.title} ({formattedDate})
+											</a>
 										</li>
-									))}
+									);
+									})}
 								</ul>
 							</div>
 						))}
