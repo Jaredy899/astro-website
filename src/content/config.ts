@@ -9,9 +9,10 @@ const blogCollection = defineCollection({
 		// Add optional fields for better organization
 		category: z.string().optional(),
 		tags: z.array(z.string()).optional(),
+		draft: z.boolean().optional().default(false),
 	}),
 });
 
 export const collections = {
 	blog: blogCollection,
-} as const; 
+} as const;

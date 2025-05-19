@@ -1,7 +1,8 @@
 ---
 title: "5/19 - Captain Picard"
 description: "My thoughts about Captain Picard."
-pubDate: 2025-05-19
+pubDate: 2025-05-26
+draft: true
 ---
 
 ## Make it So: How Picard Shaped My Worldview
