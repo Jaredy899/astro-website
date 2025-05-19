@@ -38,3 +38,5 @@ irm jaredcervantes.com/win | iex
 - **Windows Activation**: Simplified Windows activation process
 - **Nord Backgrounds**: Download and set up Nord-themed wallpapers
 - **Integration with Chris Titus Tech's Windows Utility**: Access additional applications and tweaks
+
+![Fastfetch](https://22yjaf7c2x.ufs.sh/f/avP9Ws4j0vyMDX5jgiQmlPAoSHzqcC6OJrFnj3GyxRZehatE)
