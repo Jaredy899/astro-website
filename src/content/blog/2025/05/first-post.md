@@ -13,6 +13,7 @@ This is going to be my thoughts on anything and everything. It's mainly a way of
 * ✈️ Airplanes
 * 🧠 Mental Health
 * 📰 Politics
+* 🎹 Music 
  
 I built this website using [Astro](https://astro.build/) and [View Transitions](https://docs.astro.build/en/guides/view-transitions/).
 
