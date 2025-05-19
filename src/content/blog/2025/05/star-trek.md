@@ -8,6 +8,8 @@ pubDate: 2025-05-19
 
 Captain Jean-Luc Picard. More than just a Starfleet captain, he was a scholar, a diplomat, a philosopher. His blend of intellect and integrity profoundly shaped my view of the world.
 
+![Captain Jean-Luc Picard](https://22yjaf7c2x.ufs.sh/f/avP9Ws4j0vyM3aA1h3ZKaG9A52tFVY4f1PZWcOLMEhCS8qzs)
+
 Here are some key ways Captain Picard has influenced my thinking:
 
 *   **Understanding Diverse Perspectives:** Picard constantly championed dialogue over conflict, even with formidable adversaries like the [Borg](https://memory-alpha.fandom.com/wiki/Borg). His traumatic experience as [Locutus of Borg](https://memory-alpha.fandom.com/wiki/Locutus_of_Borg) (see ["The Best of Both Worlds, Part I"](https://memory-alpha.fandom.com/wiki/The_Best_of_Both_Worlds,_Part_I_(episode)) and ["Part II"](https://memory-alpha.fandom.com/wiki/The_Best_of_Both_Worlds,_Part_II_(episode))) underscored the importance of seeking deeper understanding. [Memory Alpha](https://memory-alpha.fandom.com/wiki/Memory_Alpha) details numerous instances of his successful diplomacy.

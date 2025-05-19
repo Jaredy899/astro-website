@@ -108,6 +108,24 @@ const { Content } = await post.render();
 		font-size: 1.1rem;
 	}
 
+	/* More assertive CSS for images within blog-content */
+	.blog-content :global(img) {
+		max-width: 100% !important; /* Use !important to potentially override other styles */
+		height: auto !important; /* Use !important */
+		display: block !important; /* Use !important */
+		margin: 1.5rem auto !important; /* Use !important */
+		box-sizing: border-box !important; /* Ensure padding/border calculations are standard */
+		object-fit: contain; /* Ensure the entire image is visible without stretching */
+		border-radius: 8px; /* Optional: Add rounded corners to the image */
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+	}
+
+	/* Optional: Specific styling for images in dark mode if needed */
+	:global(.dark) .blog-content :global(img) {
+		box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+	}
+
+
 	.blog-content :global(h1) {
 		font-family: 'Inter', sans-serif;
 		font-size: 2rem;
@@ -185,4 +203,4 @@ const { Content } = await post.render();
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
 	}
-</style> 
+</style>
