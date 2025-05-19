@@ -24,6 +24,15 @@ const postsByYear = posts.reduce((acc, post) => {
 
 // Sort years and months in descending order
 const sortedYears = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
+
+// Sort posts within each month by date (newest first)
+Object.keys(postsByYear).forEach(year => {
+	Object.keys(postsByYear[Number(year)]).forEach(month => {
+		postsByYear[Number(year)][Number(month)].sort((a, b) => 
+			b.data.pubDate.getTime() - a.data.pubDate.getTime()
+		);
+	});
+});
 ---
 
 <aside id="sidebar" class="sidebar">

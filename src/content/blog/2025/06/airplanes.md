@@ -40,8 +40,3 @@ The Mriya wasn't just a marvel of engineering; it was a global ambassador, often
 The news of its destruction was a truly heavy blow. It felt like losing a piece of aviation history, a symbol of what humanity is capable of when we dare to dream big. While the An-225 may be gone, its legacy as an unparalleled feat of engineering and a symbol of hope will undoubtedly live on in the hearts of aviation enthusiasts like myself.
 
 So, while I continue to enjoy the convenience and wonder of modern air travel on aircraft like the A320 and 737, I'll always hold a special, albeit mournful, place in my memory for the magnificent Mriya. The skies are a little less grand without it.
-
----
-
-### Join the Conversation
-What are your favorite memories of flying? And were you as saddened by the loss of the An-225 as I was? Let me know in the comments below! ✈️
