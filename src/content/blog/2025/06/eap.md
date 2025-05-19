@@ -36,9 +36,21 @@ The conference strongly emphasized the crucial role of **engaging families in ps
 
 Educating families about psychosis and providing them with communication strategies, such as those based on motivational interviewing, can help decrease conflict and create a more supportive home environment.
 
-### 4. Medication Treatment: The Case for Early Clozaril
+### 4. Medication Treatment: The Case for Early Clozaril and Long-Acting Injectables
 
-**Medication treatment** was a significant topic, with discussions including the **early use of Clozaril**. While Clozaril is known for its efficacy in treatment-resistant schizophrenia, there's often a delay in prescribing it. The idea presented was to consider starting Clozaril earlier, potentially after two failed trials of other first-line antipsychotic medications, particularly for young people who are still symptomatic. This approach aims to improve outcomes when initial treatments are not fully effective. Clozaril does require careful monitoring due to potential side effects, but for some individuals, it can be a critical step towards recovery.
+**Medication treatment** was a significant topic, with discussions including the **early use of Clozaril** and the importance of **long-acting injectables (LAIs)**. While Clozaril is known for its efficacy in treatment-resistant schizophrenia, there's often a delay in prescribing it. The idea presented was to consider starting Clozaril earlier, potentially after two failed trials of other first-line antipsychotic medications, particularly for young people who are still symptomatic. This approach aims to improve outcomes when initial treatments are not fully effective. Clozaril does require careful monitoring due to potential side effects, but for some individuals, it can be a critical step towards recovery.
+
+A particularly important discussion centered around **long-acting injectables (LAIs)**. As someone who strongly advocates for LAIs, I was pleased to see this topic receive significant attention. LAIs offer several crucial advantages in early psychosis treatment:
+
+- **Improved Adherence**: LAIs eliminate the need for daily pill-taking, which can be challenging for anyone, especially young people experiencing their first episode of psychosis. This leads to more consistent medication levels in the body.
+
+- **Better Outcomes**: Studies show that LAIs are associated with lower relapse rates and fewer hospitalizations compared to oral medications. This is particularly important in early psychosis, where preventing relapse can significantly impact long-term recovery.
+
+- **Reduced Burden**: For families and caregivers, LAIs can reduce the stress of monitoring daily medication adherence. This allows everyone to focus more on recovery and less on medication management.
+
+- **Early Intervention**: Starting with LAIs early in treatment can establish a strong foundation for recovery. It's often easier to maintain a treatment regimen than to restart one after a relapse.
+
+The conference highlighted that LAIs should be considered as a first-line treatment option, not just as a solution for non-adherence. This aligns with my experience and preference for LAIs in early psychosis care. The key is to present LAIs as a positive choice for better outcomes rather than a last resort.
 
 ### 5. Cannabis and Psychosis: A Complex Relationship
 
