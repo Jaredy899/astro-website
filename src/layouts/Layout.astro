@@ -96,7 +96,9 @@ const sortedYears = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a
 				<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
 			</svg>
 		</button>
-		<slot />
+		<main id="main-content">
+			<slot />
+		</main>
 	</body>
 </html>
 
@@ -201,6 +203,8 @@ const sortedYears = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a
 		);
 		--background: #ffffff;
 		--text: #333333;
+		--sidebar-width: 300px; /* Sidebar width variable */
+		--content-max-width: 1000px; /* Max width for centered content on desktop */
 	}
 
 	:root.dark {
@@ -218,13 +222,32 @@ const sortedYears = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a
 
 	body {
 		margin: 0;
-		padding: 0;
+		padding: 0; /* Default padding, will be adjusted by sidebar */
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		align-items: center;     /* Center content block horizontally on desktop */
+		justify-content: center; /* Center content block vertically on desktop */
 		position: relative;
+		transition: padding-left 0.3s ease; /* For desktop sidebar push */
+	}
+
+	body.sidebar-open {
+		/* Desktop: push content by adding padding to the body */
+		/* This rule will be overridden for mobile where sidebar overlays */
+		padding-left: var(--sidebar-width);
+		overflow: hidden; /* Prevent body scroll when sidebar is open */
+	}
+
+	#main-content {
+		/* width: 100%; Removed to allow body's align-items to center effectively */
+		max-width: var(--content-max-width); /* Constrain width on desktop */
+		/* margin-left: auto; Removed, body's align-items will handle centering */
+		/* margin-right: auto; Removed, body's align-items will handle centering */
+		padding: 1rem; /* Default padding */
+		box-sizing: border-box;
+		/* flex-grow: 1; Removed to allow body's justify-content to center vertically if content is short */
+		overflow-x: hidden; 
 	}
 
 	#theme-toggle {
@@ -281,8 +304,8 @@ const sortedYears = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a
 	.sidebar {
 		position: fixed;
 		top: 0;
-		left: -300px;
-		width: 300px;
+		left: calc(-1 * var(--sidebar-width)); /* Use variable, original animation style */
+		width: var(--sidebar-width); /* Use variable */
 		height: 100vh;
 		background: var(--background);
 		box-shadow: none;
@@ -347,10 +370,6 @@ const sortedYears = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a
 		color: rgb(var(--accent));
 	}
 
-	body.sidebar-open {
-		overflow: hidden;
-	}
-
 	.blog-archive {
 		margin-top: 1rem;
 	}
@@ -394,5 +413,47 @@ const sortedYears = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a
 
 	.month-section a:hover {
 		opacity: 1;
+	}
+
+	/* Tablet and Mobile Overrides */
+	@media (max-width: 768px) {
+		body {
+			align-items: stretch;        /* Content full width on mobile */
+			justify-content: flex-start; /* Align content to top on mobile */
+			padding-left: 0 !important;  /* Sidebar overlays, no push on mobile */
+		}
+
+		body.sidebar-open {
+			padding-left: 0 !important; /* Ensure no push on mobile */
+			overflow: hidden;          /* Still needed for mobile */
+		}
+
+		#main-content {
+			max-width: none; /* Content full width on mobile */
+			padding: 3rem 1rem 1rem 1rem; /* Increased top padding for toggle, standard side/bottom */
+		}
+
+		/* Sidebar remains mostly the same, just overlays due to body padding change */
+	}
+
+	/* Small Mobile Overrides */
+	@media (max-width: 480px) {
+		/* Sidebar width could be adjusted here if needed, e.g., to 100% */
+		/* .sidebar { --sidebar-width: 100%; left: calc(-1 * var(--sidebar-width)); } */
+		/* For now, keep it at default 300px or 250px from tablet view if that was intended */
+
+		#sidebar-toggle {
+			top: 0.5rem;
+			left: 0.5rem;
+		}
+
+		#theme-toggle {
+			top: 0.5rem;
+			right: 0.5rem;
+		}
+
+		#main-content {
+			padding: 3rem 0.5rem 0.5rem 0.5rem; /* Increased top padding, reduced side/bottom for small screens */
+		}
 	}
 </style>

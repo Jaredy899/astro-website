@@ -25,7 +25,7 @@ const { Content } = await post.render();
 		</div>
 		<article class="prose dark:prose-invert mx-auto fade-in blog-post">
 			<time class="text-sm text-gray-500 dark:text-gray-400 blog-date">
-				{pubDate.toLocaleDateString()}
+				{new Date(pubDate).toLocaleDateString('en-US', { timeZone: 'UTC', month: 'long', day: 'numeric', year: 'numeric' })}
 			</time>
 			<div class="mt-8 blog-content">
 				<Content />
