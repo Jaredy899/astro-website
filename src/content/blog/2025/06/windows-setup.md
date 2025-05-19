@@ -15,7 +15,9 @@ This is how I set up my Windows machine quickly with all my presets and things h
 
 I created a powershell script to install my tweaks. It uses a GitHub Repo so I can install on any machine. Below is how I use it and what it does. 
 
-[Here is the link to the Repository](https://github.com/Jaredy899/win)
+[Link to the Repository](https://github.com/Jaredy899/win)
+
+![Script](https://22yjaf7c2x.ufs.sh/f/avP9Ws4j0vyM2UgDNEFDGIUbz3if4SyhWKOtNALdrJ0H1mve)
 
 ## 🚀 Installation
 
