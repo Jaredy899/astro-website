@@ -1,0 +1,208 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import JCLogo from '../../components/JCLogo.astro';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog');
+	return posts
+		.filter(post => !post.data.draft)
+		.map((post) => ({
+			params: { slug: post.slug },
+			props: post,
+		}));
+}
+
+const post = Astro.props;
+const { title, pubDate } = post.data;
+const { Content } = await post.render();
+---
+
+<Layout title={title}>
+	<main class="container mx-auto px-4 py-8">
+		<div class="logo-container" transition:name="jc-logo">
+			<a href="/" class="logo-link">
+				<JCLogo />
+			</a>
+		</div>
+		<article class="prose dark:prose-invert mx-auto fade-in blog-post">
+			<time class="text-sm text-gray-500 dark:text-gray-400 blog-date">
+				{new Date(pubDate).toLocaleDateString('en-US', { timeZone: 'UTC', month: 'long', day: 'numeric', year: 'numeric' })}
+			</time>
+			<div class="mt-8 blog-content">
+				<Content />
+			</div>
+		</article>
+	</main>
+</Layout>
+
+<style>
+	.container {
+		max-width: 800px;
+	}
+
+	.logo-container {
+		width: 40px;
+		height: 40px;
+		margin: 1rem auto;
+		transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		color: var(--text) !important;
+	}
+
+	.logo-container :global(svg) {
+		color: var(--text) !important;
+	}
+
+	.logo-link {
+		display: block;
+		text-decoration: none;
+		transition: transform 0.3s ease;
+	}
+
+	.logo-link:hover {
+		transform: scale(1.1);
+	}
+
+	.fade-in {
+		animation: fadeIn 0.5s ease-in;
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: translateY(10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.blog-post {
+		font-family: 'Inter', system-ui, -apple-system, sans-serif;
+		line-height: 1.8;
+	}
+
+	.blog-title {
+		font-family: 'Playfair Display', serif;
+		font-size: 2.5rem;
+		font-weight: 700;
+		line-height: 1.2;
+		margin-bottom: 1rem;
+		background: linear-gradient(135deg, #475569 0%, #334155 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.blog-date {
+		font-family: 'Inter', sans-serif;
+		font-size: 0.9rem;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+	}
+
+	.blog-content {
+		font-size: 1.1rem;
+	}
+
+	/* More assertive CSS for images within blog-content */
+	.blog-content :global(img) {
+		max-width: 100% !important; /* Use !important to potentially override other styles */
+		height: auto !important; /* Use !important */
+		display: block !important; /* Use !important */
+		margin: 1.5rem auto !important; /* Use !important */
+		box-sizing: border-box !important; /* Ensure padding/border calculations are standard */
+		object-fit: contain; /* Ensure the entire image is visible without stretching */
+		border-radius: 8px; /* Optional: Add rounded corners to the image */
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+	}
+
+	/* Optional: Specific styling for images in dark mode if needed */
+	:global(.dark) .blog-content :global(img) {
+		box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+	}
+
+
+	.blog-content :global(h1) {
+		font-family: 'Inter', sans-serif;
+		font-size: 2rem;
+		font-weight: 600;
+		letter-spacing: -0.02em;
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		background: linear-gradient(135deg, #64748b 0%, #475569 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.blog-content h2 {
+		font-family: 'Playfair Display', serif;
+		font-size: 1.8rem;
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		color: var(--text);
+	}
+
+	.blog-content p {
+		margin-bottom: 1.5rem;
+	}
+
+	.blog-content ul, .blog-content ol {
+		margin-bottom: 1.5rem;
+		padding-left: 1.5rem;
+	}
+
+	.blog-content li {
+		margin-bottom: 0.5rem;
+	}
+
+	.blog-content code {
+		font-family: 'Fira Code', monospace;
+		background: rgba(0, 0, 0, 0.05);
+		padding: 0.2em 0.4em;
+		border-radius: 3px;
+		font-size: 0.9em;
+	}
+
+	.blog-content pre {
+		background: #1a1a1a;
+		padding: 1rem;
+		border-radius: 8px;
+		overflow-x: auto;
+		margin: 1.5rem 0;
+	}
+
+	.blog-content pre code {
+		background: none;
+		padding: 0;
+		color: #fff;
+	}
+
+	:global(.dark) .blog-content code {
+		background: rgba(255, 255, 255, 0.1);
+	}
+
+	:global(.dark) .blog-content pre {
+		background: #2a2a2a;
+	}
+
+	:global(.dark) .blog-title {
+		background: linear-gradient(135deg, #94a3b8 0%, #64748b 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	:global(.dark) .blog-content :global(h1) {
+		background: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+</style>
