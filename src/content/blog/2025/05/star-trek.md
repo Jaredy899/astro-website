@@ -1,5 +1,5 @@
 ---
-title: "5/19 - Captain Picard"
+title: "Captain Picard"
 description: "My thoughts about Captain Picard."
 pubDate: 2025-05-26
 draft: true
