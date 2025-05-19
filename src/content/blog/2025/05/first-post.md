@@ -1,5 +1,5 @@
 ---
-title: "5/18 - My First Post"
+title: "5/19 - My First Post"
 description: "My first blog post! I built this blog using Astro and added cool view transitions."
 pubDate: 2025-05-19
 draft: false
