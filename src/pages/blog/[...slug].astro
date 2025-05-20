@@ -16,12 +16,15 @@ export async function getStaticPaths() {
 const post = Astro.props;
 const { title, pubDate } = post.data;
 const { Content } = await post.render();
+
+// Process the content to remove tabindex from pre elements
+const processedContent = await Content;
 ---
 
 <Layout title={title}>
 	<main class="container mx-auto px-4 py-8">
 		<div class="logo-container" transition:name="jc-logo">
-			<a href="/" class="logo-link">
+			<a href="/" class="logo-link" aria-label="Return to home page">
 				<JCLogo />
 			</a>
 		</div>
@@ -35,6 +38,15 @@ const { Content } = await post.render();
 		</article>
 	</main>
 </Layout>
+
+<script>
+	// Remove tabindex from pre elements
+	document.addEventListener('astro:page-load', () => {
+		document.querySelectorAll('pre').forEach(pre => {
+			pre.removeAttribute('tabindex');
+		});
+	});
+</script>
 
 <style>
 	.container {
@@ -176,12 +188,14 @@ const { Content } = await post.render();
 		border-radius: 8px;
 		overflow-x: auto;
 		margin: 1.5rem 0;
+		position: relative;
 	}
 
 	.blog-content pre code {
 		background: none;
 		padding: 0;
 		color: #fff;
+		display: block;
 	}
 
 	:global(.dark) .blog-content code {
@@ -204,5 +218,10 @@ const { Content } = await post.render();
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
+	}
+
+	/* Override prose styles for pre elements */
+	:global(.prose) pre {
+		tabindex: unset !important;
 	}
 </style>

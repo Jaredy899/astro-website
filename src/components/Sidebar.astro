@@ -35,27 +35,32 @@ Object.keys(postsByYear).forEach(year => {
 });
 ---
 
-<aside id="sidebar" class="sidebar">
-	<nav>
-		<h2>Blog Posts</h2>
-		<div class="blog-archive">
+<aside id="sidebar" class="sidebar" aria-label="Blog navigation">
+	<nav aria-labelledby="blog-posts-heading">
+		<h2 id="blog-posts-heading" aria-label="Blog Posts Navigation">Blog Posts</h2>
+		<div class="blog-archive" role="list" aria-labelledby="blog-posts-heading">
 			{sortedYears.map((year) => (
-				<div class="year-section">
-					<h3 class="year">{year}</h3>
+				<div class="year-section" role="listitem">
+					<h3 class="year" id={`year-${year}`} aria-label={`Blog posts from ${year}`}>Posts from {year}</h3>
 					{Object.keys(postsByYear[Number(year)])
 						.sort((a, b) => Number(b) - Number(a))
-						.map((month) => (
-							<div class="month-section">
-								<h4 class="month">
-									{new Date(0, Number(month)).toLocaleString('default', { month: 'long' })}
+						.map((month) => {
+							const monthName = new Date(0, Number(month)).toLocaleString('default', { month: 'long' });
+							return (
+							<div class="month-section" role="listitem">
+								<h4 class="month" id={`month-${year}-${month}`} aria-label={`Posts from ${monthName} ${year}`}>
+									{monthName}
 								</h4>
-								<ul>
+								<ul aria-labelledby={`month-${year}-${month}`} role="list">
 									{postsByYear[Number(year)][Number(month)].map((post) => {
 										const pubDate = new Date(post.data.pubDate);
 										const formattedDate = pubDate.toLocaleDateString('en-US'); // MM-DD-YYYY format
 										return (
-										<li>
-											<a href={`/blog/${post.slug}`}>
+										<li role="listitem">
+											<a 
+												href={`/blog/${post.slug}`}
+												aria-label={`${post.data.title} - Published on ${formattedDate}`}
+											>
 												{post.data.title} ({formattedDate})
 											</a>
 										</li>
@@ -63,13 +68,14 @@ Object.keys(postsByYear).forEach(year => {
 									})}
 								</ul>
 							</div>
-						))}
+						);
+						})}
 				</div>
 			))}
 		</div>
 	</nav>
 </aside>
-<div id="sidebar-overlay" class="sidebar-overlay"></div>
+<div id="sidebar-overlay" class="sidebar-overlay" aria-hidden="true"></div>
 
 <style>
 	.sidebar {
