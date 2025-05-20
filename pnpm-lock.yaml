@@ -11,6 +11,12 @@ importers:
       astro:
         specifier: ^5.7.13
         version: 5.7.13(@types/node@22.15.17)(rollup@4.40.2)(typescript@5.8.3)
+      hastscript:
+        specifier: ^9.0.1
+        version: 9.0.1
+      unist-util-visit:
+        specifier: ^5.0.0
+        version: 5.0.0
 
 packages:
 
