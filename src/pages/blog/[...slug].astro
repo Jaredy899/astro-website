@@ -14,14 +14,14 @@ export async function getStaticPaths() {
 }
 
 const post = Astro.props;
-const { title, pubDate } = post.data;
+const { title, pubDate, description } = post.data;
 const { Content } = await post.render();
 
 // Process the content to remove tabindex from pre elements
 const processedContent = await Content;
 ---
 
-<Layout title={title}>
+<Layout title={title} description={description}>
 	<main class="container mx-auto px-4 py-8">
 		<div class="logo-container" transition:name="jc-logo">
 			<a href="/" class="logo-link" aria-label="Return to home page">
@@ -40,10 +40,49 @@ const processedContent = await Content;
 </Layout>
 
 <script>
-	// Remove tabindex from pre elements
+	// Remove tabindex from pre elements and setup copy buttons
 	document.addEventListener('astro:page-load', () => {
+		// Remove tabindex
 		document.querySelectorAll('pre').forEach(pre => {
 			pre.removeAttribute('tabindex');
+		});
+
+		// Setup copy buttons
+		document.querySelectorAll('.copy-code-button').forEach((button) => {
+			button.addEventListener('click', async () => {
+				const wrapper = button.parentElement;
+				const pre = wrapper?.querySelector('pre');
+				const codeBlock = pre?.querySelector('code');
+				
+				if (!codeBlock) {
+					console.error('No code block found');
+					return;
+				}
+
+				try {
+					const text = codeBlock.textContent || '';
+					await navigator.clipboard.writeText(text);
+					
+					// Store original button content
+					const originalContent = button.innerHTML;
+					
+					// Show feedback
+					button.innerHTML = `
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<polyline points="20 6 9 17 4 12"></polyline>
+						</svg>
+					`;
+					button.classList.add('copied');
+					
+					// Restore original content after 2 seconds
+					setTimeout(() => {
+						button.innerHTML = originalContent;
+						button.classList.remove('copied');
+					}, 2000);
+				} catch (err) {
+					console.error('Failed to copy text: ', err);
+				}
+			});
 		});
 	});
 </script>
@@ -223,5 +262,47 @@ const processedContent = await Content;
 	/* Override prose styles for pre elements */
 	:global(.prose) pre {
 		tabindex: unset !important;
+	}
+
+	/* Copy button styles */
+	.copy-code-button {
+		position: absolute;
+		top: 0.5rem;
+		right: 0.5rem;
+		padding: 0.5rem;
+		background: rgba(255, 255, 255, 0.1);
+		border: none;
+		border-radius: 0.25rem;
+		cursor: pointer;
+		color: #fff;
+		transition: all 0.2s ease;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.copy-code-button:hover {
+		background: rgba(255, 255, 255, 0.2);
+	}
+
+	.copy-code-button.copied {
+		background: rgba(0, 255, 0, 0.2);
+	}
+
+	.copy-code-button svg {
+		width: 1rem;
+		height: 1rem;
+	}
+
+	:global(.dark) .copy-code-button {
+		background: rgba(255, 255, 255, 0.1);
+	}
+
+	:global(.dark) .copy-code-button:hover {
+		background: rgba(255, 255, 255, 0.2);
+	}
+
+	:global(.dark) .copy-code-button.copied {
+		background: rgba(0, 255, 0, 0.2);
 	}
 </style>
