@@ -1,0 +1,87 @@
+<script>
+  function setupCopyButtons() {
+    console.log('Setting up copy buttons...');
+    const buttons = document.querySelectorAll('.copy-code-button');
+    console.log('Found buttons:', buttons.length);
+    
+    buttons.forEach((button) => {
+      button.addEventListener('click', async () => {
+        console.log('Button clicked');
+        const wrapper = button.parentElement;
+        console.log('Wrapper:', wrapper);
+        const pre = wrapper?.querySelector('pre');
+        console.log('Pre:', pre);
+        const codeBlock = pre?.querySelector('code');
+        console.log('Code block:', codeBlock);
+        
+        if (!codeBlock) {
+          console.error('No code block found');
+          return;
+        }
+
+        try {
+          const text = codeBlock.textContent || '';
+          console.log('Copying text:', text);
+          await navigator.clipboard.writeText(text);
+          button.setAttribute('aria-label', 'Copied!');
+          setTimeout(() => {
+            button.setAttribute('aria-label', 'Copy code');
+          }, 2000);
+        } catch (err) {
+          console.error('Failed to copy text: ', err);
+        }
+      });
+    });
+  }
+
+  // Run on initial load
+  if (typeof document !== 'undefined') {
+    setupCopyButtons();
+  }
+
+  // Run after view transitions
+  document.addEventListener('astro:page-load', setupCopyButtons);
+</script>
+
+<style is:global>
+  .code-block-wrapper {
+    position: relative;
+    margin: 1rem 0;
+  }
+
+  .copy-code-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.2s;
+  }
+
+  .copy-code-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .copy-code-button svg {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  pre {
+    margin: 0;
+    padding: 1rem;
+    background: #1a1a1a;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+  }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+</style> 

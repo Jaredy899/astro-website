@@ -4,13 +4,15 @@ import type { CollectionEntry } from 'astro:content';
 import { ClientRouter } from 'astro:transitions';
 import Sidebar from '../components/Sidebar.astro';
 import ThemeToggle from '../components/ThemeToggle.astro';
+import CopyButtonScript from '../components/CopyButtonScript.astro';
 
 interface Props {
 	title: string;
 	showSidebar?: boolean;
+	description: string;
 }
 
-const { title, showSidebar = false } = Astro.props;
+const { title, showSidebar = false, description } = Astro.props;
 const allPosts = await getCollection('blog');
 const posts = allPosts.filter(post => !post.data.draft);
 
@@ -45,6 +47,7 @@ const sortedYears = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 		<title>{title}</title>
+		<meta name="description" content={description} />
 		<ClientRouter />
 	</head>
 	<body>
@@ -59,6 +62,7 @@ const sortedYears = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a
 		<main id="main-content">
 			<slot />
 		</main>
+		<CopyButtonScript />
 	</body>
 </html>
 

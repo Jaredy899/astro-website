@@ -10,6 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.7.13"
+    "astro": "^5.7.13",
+    "hastscript": "^9.0.1",
+    "unist-util-visit": "^5.0.0"
   }
 }
