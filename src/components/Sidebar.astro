@@ -7,31 +7,25 @@ interface Props {
 
 const { posts } = Astro.props;
 
-// Group posts by year and month
+// Group posts by year
 const postsByYear = posts.reduce((acc, post) => {
 	const year = post.data.pubDate.getFullYear();
-	const month = post.data.pubDate.getMonth();
 	
 	if (!acc[year]) {
-		acc[year] = {};
+		acc[year] = [];
 	}
-	if (!acc[year][month]) {
-		acc[year][month] = [];
-	}
-	acc[year][month].push(post);
+	acc[year].push(post);
 	return acc;
-}, {} as Record<number, Record<number, CollectionEntry<'blog'>[]>>);
+}, {} as Record<number, CollectionEntry<'blog'>[]>);
 
-// Sort years and months in descending order
+// Sort years in descending order
 const sortedYears = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
 
-// Sort posts within each month by date (newest first)
+// Sort posts within each year by date (newest first)
 Object.keys(postsByYear).forEach(year => {
-	Object.keys(postsByYear[Number(year)]).forEach(month => {
-		postsByYear[Number(year)][Number(month)].sort((a, b) => 
-			b.data.pubDate.getTime() - a.data.pubDate.getTime()
-		);
-	});
+	postsByYear[Number(year)].sort((a, b) => 
+		b.data.pubDate.getTime() - a.data.pubDate.getTime()
+	);
 });
 ---
 
@@ -42,34 +36,22 @@ Object.keys(postsByYear).forEach(year => {
 			{sortedYears.map((year) => (
 				<div class="year-section" role="listitem">
 					<h3 class="year" id={`year-${year}`} aria-label={`Blog posts from ${year}`}>Posts from {year}</h3>
-					{Object.keys(postsByYear[Number(year)])
-						.sort((a, b) => Number(b) - Number(a))
-						.map((month) => {
-							const monthName = new Date(0, Number(month)).toLocaleString('default', { month: 'long' });
+					<ul aria-labelledby={`year-${year}`} role="list">
+						{postsByYear[Number(year)].map((post) => {
+							const pubDate = new Date(post.data.pubDate);
+							const formattedDate = pubDate.toLocaleDateString('en-US'); // MM-DD-YYYY format
 							return (
-							<div class="month-section" role="listitem">
-								<h4 class="month" id={`month-${year}-${month}`} aria-label={`Posts from ${monthName} ${year}`}>
-									{monthName}
-								</h4>
-								<ul aria-labelledby={`month-${year}-${month}`} role="list">
-									{postsByYear[Number(year)][Number(month)].map((post) => {
-										const pubDate = new Date(post.data.pubDate);
-										const formattedDate = pubDate.toLocaleDateString('en-US'); // MM-DD-YYYY format
-										return (
-										<li role="listitem">
-											<a 
-												href={`/blog/${post.slug}`}
-												aria-label={`${post.data.title} - Published on ${formattedDate}`}
-											>
-												{post.data.title} ({formattedDate})
-											</a>
-										</li>
-									);
-									})}
-								</ul>
-							</div>
+							<li role="listitem">
+								<a 
+									href={`/blog/${post.slug}`}
+									aria-label={`${post.data.title} - Published on ${formattedDate}`}
+								>
+									{post.data.title} ({formattedDate})
+								</a>
+							</li>
 						);
 						})}
+					</ul>
 				</div>
 			))}
 		</div>
@@ -162,12 +144,12 @@ Object.keys(postsByYear).forEach(year => {
 		margin-bottom: 0.5rem;
 	}
 
-	.month-section {
+	.month-section { /* This class might become unused or can be removed/repurposed */
 		margin-left: 1rem;
 		margin-bottom: 1rem;
 	}
 
-	.month {
+	.month { /* This class might become unused or can be removed/repurposed */
 		font-size: 1rem;
 		font-weight: 500;
 		color: var(--text);
@@ -175,15 +157,15 @@ Object.keys(postsByYear).forEach(year => {
 		opacity: 0.8;
 	}
 
-	.month-section ul {
+	.month-section ul { /* This class might become unused or can be removed/repurposed */
 		margin-left: 1rem;
 	}
 
-	.month-section li {
+	.month-section li { /* This class might become unused or can be removed/repurposed */
 		margin: 0.25rem 0;
 	}
 
-	.month-section a {
+	.month-section a { /* This class might become unused or can be removed/repurposed */
 		font-size: 0.95rem;
 		opacity: 0.9;
 	}
