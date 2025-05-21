@@ -18,7 +18,7 @@ const { title, pubDate, description } = post.data;
 const { Content } = await post.render();
 
 // Process the content to remove tabindex from pre elements
-const processedContent = await Content;
+const processedContent = Content;
 ---
 
 <Layout title={title} description={description}>

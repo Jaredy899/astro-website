@@ -21,7 +21,8 @@ There's something uniquely thrilling about the entire flying experience. The way
 
 I've come to love every aspect of flying, even the ones that make others nervous. Turbulence? Bring it on! There's something exhilarating about feeling the aircraft dance with the air currents, a reminder that we're not just passengers but participants in this incredible dance with the atmosphere.
 
-### What I Love About Flying:
+### What I Love About Flying
+
 - The moment the engines spool up, that deep rumble that vibrates through your entire body
 - The gentle push back into your seat during takeoff
 - The way clouds look different from above, like a fluffy white carpet
@@ -30,8 +31,7 @@ I've come to love every aspect of flying, even the ones that make others nervous
 
 ## 🛫 A Lifelong Passion
 
-
-Even though I used flight simulator most of my life, my knowledge of aviation became stronger after watching pilots on YouTube. I still spend hours listening to them explain how each of their airplanes works and love listening to them talking to ATC. 
+Even though I used flight simulator most of my life, my knowledge of aviation became stronger after watching pilots on YouTube. I still spend hours listening to them explain how each of their airplanes works and love listening to them talking to ATC.
 
 ## 🌅 Looking to the Future
 
