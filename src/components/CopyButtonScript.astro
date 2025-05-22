@@ -1,36 +1,60 @@
 <script>
   function setupCopyButtons() {
-    console.log('Setting up copy buttons...');
-    const buttons = document.querySelectorAll('.copy-code-button');
-    console.log('Found buttons:', buttons.length);
+    const codeBlocks = document.querySelectorAll('pre code');
     
-    buttons.forEach((button) => {
-      button.addEventListener('click', async () => {
-        console.log('Button clicked');
-        const wrapper = button.parentElement;
-        console.log('Wrapper:', wrapper);
-        const pre = wrapper?.querySelector('pre');
-        console.log('Pre:', pre);
-        const codeBlock = pre?.querySelector('code');
-        console.log('Code block:', codeBlock);
-        
-        if (!codeBlock) {
-          console.error('No code block found');
-          return;
-        }
+    codeBlocks.forEach((codeBlock) => {
+      // Create wrapper if it doesn't exist
+      let wrapper = codeBlock.parentElement;
+      if (!wrapper) return;
+      
+      if (!wrapper.classList.contains('code-block-wrapper')) {
+        const newWrapper = document.createElement('div');
+        newWrapper.className = 'code-block-wrapper';
+        wrapper.insertBefore(newWrapper, codeBlock);
+        newWrapper.appendChild(codeBlock);
+        wrapper = newWrapper;
+      }
 
-        try {
-          const text = codeBlock.textContent || '';
-          console.log('Copying text:', text);
-          await navigator.clipboard.writeText(text);
-          button.setAttribute('aria-label', 'Copied!');
-          setTimeout(() => {
-            button.setAttribute('aria-label', 'Copy code');
-          }, 2000);
-        } catch (err) {
-          console.error('Failed to copy text: ', err);
-        }
-      });
+      // Add copy button if it doesn't exist
+      if (!wrapper.querySelector('.copy-code-button')) {
+        const copyButton = document.createElement('button');
+        copyButton.className = 'copy-code-button';
+        copyButton.setAttribute('aria-label', 'Copy code');
+        copyButton.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+        `;
+
+        copyButton.addEventListener('click', async () => {
+          try {
+            const text = codeBlock.textContent || '';
+            await navigator.clipboard.writeText(text);
+            
+            // Store original button content
+            const originalContent = copyButton.innerHTML;
+            
+            // Show feedback
+            copyButton.innerHTML = `
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            `;
+            copyButton.classList.add('copied');
+            
+            // Restore original content after 2 seconds
+            setTimeout(() => {
+              copyButton.innerHTML = originalContent;
+              copyButton.classList.remove('copied');
+            }, 2000);
+          } catch (err) {
+            console.error('Failed to copy text: ', err);
+          }
+        });
+
+        wrapper.appendChild(copyButton);
+      }
     });
   }
 
@@ -59,11 +83,18 @@
     border-radius: 0.25rem;
     cursor: pointer;
     color: #fff;
-    transition: background-color 0.2s;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .copy-code-button:hover {
     background: rgba(255, 255, 255, 0.2);
+  }
+
+  .copy-code-button.copied {
+    background: rgba(0, 255, 0, 0.2);
   }
 
   .copy-code-button svg {
@@ -83,5 +114,17 @@
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     font-size: 0.875rem;
     line-height: 1.5;
+  }
+
+  :global(.dark) .copy-code-button {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  :global(.dark) .copy-code-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  :global(.dark) .copy-code-button.copied {
+    background: rgba(0, 255, 0, 0.2);
   }
 </style> 
