@@ -2,7 +2,7 @@
 title: "My Windows Setup"
 description: "How I set up my Windows machine"
 pubDate: 2025-06-02
-draft: false
+draft: true
 ---
 
 <!-- markdownlint-disable-next-line MD033 -->
