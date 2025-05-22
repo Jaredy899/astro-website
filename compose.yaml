@@ -1,7 +1,0 @@
-services:
-  website:
-    container_name: website
-    image: ghcr.io/jaredy899/astro-website:latest
-    ports:
-      - "80:80" 
-    restart: unless-stopped
