@@ -9,7 +9,7 @@ draft: true
 
 Captain Jean-Luc Picard. More than just a Starfleet captain, he was a scholar, a diplomat, a philosopher. His blend of intellect and integrity profoundly shaped my view of the world.
 
-![Captain Jean-Luc Picard](https://22yjaf7c2x.ufs.sh/f/avP9Ws4j0vyM3aA1h3ZKaG9A52tFVY4f1PZWcOLMEhCS8qzs)
+![Captain Jean-Luc Picard](https://22yjaf7c2x.ufs.sh/f/avP9Ws4j0vyMxfN6dryCFl9oQYVuRiSDcdn7bMXpAZHqNwja)
 
 Here are some key ways Captain Picard has influenced my thinking:
 
