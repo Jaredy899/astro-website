@@ -7,53 +7,35 @@ interface Props {
 
 const { posts } = Astro.props;
 
-// Group posts by year
-const postsByYear = posts.reduce((acc, post) => {
-	const year = post.data.pubDate.getFullYear();
-	
-	if (!acc[year]) {
-		acc[year] = [];
-	}
-	acc[year].push(post);
-	return acc;
-}, {} as Record<number, CollectionEntry<'blog'>[]>);
-
-// Sort years in descending order
-const sortedYears = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
-
-// Sort posts within each year by date (newest first)
-Object.keys(postsByYear).forEach(year => {
-	postsByYear[Number(year)].sort((a, b) => 
-		b.data.pubDate.getTime() - a.data.pubDate.getTime()
-	);
-});
+// Sort posts by date (newest first)
+const sortedPosts = [...posts].sort((a, b) => 
+	b.data.pubDate.getTime() - a.data.pubDate.getTime()
+);
 ---
 
 <aside id="sidebar" class="sidebar" aria-label="Blog navigation">
 	<nav aria-labelledby="blog-posts-heading">
 		<h2 id="blog-posts-heading" aria-label="Blog Posts Navigation">Blog Posts</h2>
 		<div class="blog-archive" role="list" aria-labelledby="blog-posts-heading">
-			{sortedYears.map((year) => (
-				<div class="year-section" role="listitem">
-					<h3 class="year" id={`year-${year}`} aria-label={`Blog posts from ${year}`}>Posts from {year}</h3>
-					<ul aria-labelledby={`year-${year}`} role="list">
-						{postsByYear[Number(year)].map((post) => {
-							const pubDate = new Date(post.data.pubDate);
-							const formattedDate = pubDate.toLocaleDateString('en-US'); // MM-DD-YYYY format
-							return (
+			<ul aria-label="Blog posts list" role="list">
+				{sortedPosts.map((post, index) => {
+					const pubDate = new Date(post.data.pubDate);
+					const formattedDate = pubDate.toLocaleDateString('en-US'); // MM-DD-YYYY format
+					return (
+						<>
+							{index > 0 && <hr class="post-separator" />}
 							<li role="listitem">
 								<a 
 									href={`/blog/${post.slug}`}
 									aria-label={`${post.data.title} - Published on ${formattedDate}`}
 								>
-									{post.data.title} ({formattedDate})
+									{post.data.title} <span class="post-date">({formattedDate})</span>
 								</a>
 							</li>
-						);
-						})}
-					</ul>
-				</div>
-			))}
+						</>
+					);
+				})}
+			</ul>
 		</div>
 	</nav>
 </aside>
@@ -123,54 +105,26 @@ Object.keys(postsByYear).forEach(year => {
 		text-decoration: none;
 		font-size: 1.1rem;
 		transition: color 0.2s ease;
+		display: inline;
 	}
 
 	.sidebar a:hover {
 		color: rgb(var(--accent));
 	}
 
+	.post-date {
+		font-size: 0.9rem;
+		opacity: 0.7;
+		margin-left: 0.25rem;
+	}
+
+	.post-separator {
+		margin: 1rem 0;
+		border: none;
+		border-top: 1px solid rgba(var(--text), 0.1);
+	}
+
 	.blog-archive {
 		margin-top: 1rem;
-	}
-
-	.year-section {
-		margin-bottom: 1.5rem;
-	}
-
-	.year {
-		font-size: 1.2rem;
-		font-weight: 600;
-		color: var(--text);
-		margin-bottom: 0.5rem;
-	}
-
-	.month-section { /* This class might become unused or can be removed/repurposed */
-		margin-left: 1rem;
-		margin-bottom: 1rem;
-	}
-
-	.month { /* This class might become unused or can be removed/repurposed */
-		font-size: 1rem;
-		font-weight: 500;
-		color: var(--text);
-		margin-bottom: 0.25rem;
-		opacity: 0.8;
-	}
-
-	.month-section ul { /* This class might become unused or can be removed/repurposed */
-		margin-left: 1rem;
-	}
-
-	.month-section li { /* This class might become unused or can be removed/repurposed */
-		margin: 0.25rem 0;
-	}
-
-	.month-section a { /* This class might become unused or can be removed/repurposed */
-		font-size: 0.95rem;
-		opacity: 0.9;
-	}
-
-	.month-section a:hover {
-		opacity: 1;
 	}
 </style> 
