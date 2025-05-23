@@ -20,6 +20,8 @@ A comprehensive set of scripts to automate setting up and configuring macOS envi
 - **macOS Settings**: Apply optimal system settings for development
 - **SSH Key Setup**: Automate SSH key generation and GitHub integration
 
+[Link to the Repository](https://github.com/Jaredy899/mac.git)
+
 ![Mac Setup](https://22yjaf7c2x.ufs.sh/f/avP9Ws4j0vyMZcAWdKuJrPdyjXtn982fkAIm46GK3LZcHNh7)
 
 ### 🎯 What's New

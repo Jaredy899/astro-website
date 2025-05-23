@@ -11,6 +11,8 @@ My love for airplanes didn't just happen overnight. My grandfather also loved go
 
 ## 🎮 From Simulator to Reality
 
+![Flight Simulator X](https://22yjaf7c2x.ufs.sh/f/avP9Ws4j0vyMnjA29Fcx8TWaBUX7siRSeEoJZ0IwG6frjHlL)
+
 One of my earliest memories is sitting in my grandfather's lap, watching him navigate through Microsoft Flight Simulator. Today, I still find myself spending countless hours in flight simulators, practicing approaches, learning new aircraft, and reliving those precious moments with my grandfather.
 
 > "The smell of jet fuel at airports, that distinct aroma that somehow manages to be both industrial and exciting – it's like a time machine that instantly transports me back to those childhood days at the airport with my grandfather."
