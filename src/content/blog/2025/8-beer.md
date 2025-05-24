@@ -1,6 +1,6 @@
 ---
-title: "Red Hot Chili Peppers"
-description: "Why the Chili Peppers are one of the greatest bands."
+title: "Beer!"
+description: "Why Beer is great and specifically IPA's."
 pubDate: 2025-07-07
 draft: true
 ---
