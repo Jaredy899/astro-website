@@ -2,7 +2,7 @@
 title: "Beer!"
 description: "Why Beer is great and specifically IPA's."
 pubDate: 2025-07-07
-draft: true
+draft: false
 ---
 
 # 🍺 Why I Love IPAs
