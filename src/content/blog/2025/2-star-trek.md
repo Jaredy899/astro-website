@@ -18,6 +18,8 @@ Here are some key ways Captain Picard has influenced my thinking:
 * **Upholding Justice and Principles:** Picard's unwavering stand for justice in ["The Drumhead"](https://memory-alpha.fandom.com/wiki/The_Drumhead_(episode)) against fear and hysteria is a vital lesson. His quote, *"With the first link, the chain is forged..."* serves as a powerful reminder of freedom's fragility.
 
 * **Resilience and Acceptance:** Picard offered a profound perspective on failure with his famous line, *"It is possible to commit no mistakes and still lose. That is not weakness; that is life."* This outlook frees us to persevere through setbacks.
+* 
++* **The Prime Directive and Cultural Sensitivity:** One of Picard's most profound lessons regarding the Prime Directive came in ["Who Watches The Watchers"](https://memory-alpha.fandom.com/wiki/Who_Watches_The_Watchers_(episode)). When facing the Mintakans, a proto-Vulcan society, Picard delivers a moving speech to Nuria, acknowledging the profound impact Starfleet's accidental exposure had on her people and expressing deep regret for violating their cultural integrity. This moment underscores his commitment to respecting other civilizations' development, even when it is personally painful.
 
 * **Humble and Collaborative Leadership:** Picard's willingness to admit when he was wrong and to seek counsel were powerful leadership traits. He wasn't afraid of vulnerability, fostering a collaborative environment with his crew.
 
