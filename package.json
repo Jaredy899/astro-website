@@ -10,7 +10,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.0",
     "astro": "^5.7.13",
     "pnpm": "^10.11.0"
   }

@@ -2,10 +2,8 @@
 title: "The Magic of Flight: A Personal Journey Through Aviation"
 description: "A heartfelt reflection on my lifelong passion for aviation, inspired by my grandfather and nurtured through flight simulators"
 pubDate: 2025-06-16
-draft: true
+draft: false
 ---
-
-import ResponsiveVideo from '../../../components/ResponsiveVideo.astro';
 
 # ✈️ The Magic of Flight
 
@@ -19,7 +17,10 @@ One of my earliest memories is sitting in my grandfather's lap, watching him nav
 
 > "The smell of jet fuel at airports, that distinct aroma that somehow manages to be both industrial and exciting – it's like a time machine that instantly transports me back to those childhood days at the airport with my grandfather."
 
-<ResponsiveVideo src="https://22yjaf7c2x.ufs.sh/f/avP9Ws4j0vyMewPsDnvZunTNIBq8K0FEPavgJD7jyUtzYXmw" />
+<video controls style="width: 100%; aspect-ratio: 16/9;">
+  <source src="https://22yjaf7c2x.ufs.sh/f/avP9Ws4j0vyMewPsDnvZunTNIBq8K0FEPavgJD7jyUtzYXmw" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## 🌟 The Sensory Experience of Flying
 
@@ -43,4 +44,4 @@ Even though I used flight simulator most of my life, my knowledge of aviation be
 
 My passion for flying isn't just about the mechanics of flight – it was about the freedom, the perspective, and the endless possibilities that aviation represents.
 
-The next time you're at an airport, take a moment to breathe in that unique airport air, listen to the symphony of sounds, and maybe you'll understand why, for me, flying isn't just a mode of transportation – it's a way of life.
+The next time you're at an airport, take a moment to breathe in that unique airport air, listen to the symphony of sounds, and maybe you'll understand why, for me, flying isn't just a mode of transportation – it's a way of life. 
