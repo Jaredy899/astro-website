@@ -44,4 +44,4 @@ Even though I used flight simulator most of my life, my knowledge of aviation be
 
 My passion for flying isn't just about the mechanics of flight – it was about the freedom, the perspective, and the endless possibilities that aviation represents.
 
-The next time you're at an airport, take a moment to breathe in that unique airport air, listen to the symphony of sounds, and maybe you'll understand why, for me, flying isn't just a mode of transportation – it's a way of life. 
+The next time you're at an airport, take a moment to breathe in that unique airport air, listen to the symphony of sounds, and maybe you'll understand why, for me, flying isn't just a mode of transportation – it's a way of life.
