@@ -309,4 +309,14 @@ const processedContent = Content;
 	:global(.dark) .copy-code-button.copied {
 		background: rgba(0, 255, 0, 0.2);
 	}
+
+	.blog-content :global(a) {
+		color: var(--link-color);
+		text-decoration: none;
+		transition: opacity 0.2s ease;
+	}
+
+	.blog-content :global(a:hover) {
+		opacity: 0.8;
+	}
 </style>

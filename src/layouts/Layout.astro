@@ -107,7 +107,7 @@ const sortedYears = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a
 <style is:global>
 	:root {
 		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
+		--accent-light: 255, 230, 255;
 		--accent-dark: 49, 10, 101;
 		--accent-gradient: linear-gradient(
 			45deg,
@@ -117,6 +117,7 @@ const sortedYears = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a
 		);
 		--background: #ffffff;
 		--text: #333333;
+		--link-color: rgb(var(--accent));
 		--sidebar-width: 300px;
 		--content-max-width: 1000px;
 	}
@@ -124,6 +125,7 @@ const sortedYears = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a
 	:root.dark {
 		--background: #000000;
 		--text: #ffffff;
+		--link-color: rgb(var(--accent-light));
 	}
 
 	html {
