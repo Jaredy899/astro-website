@@ -17,6 +17,22 @@ const post = Astro.props;
 const { title, pubDate, description } = post.data;
 const { Content } = await post.render();
 
+// Format date to be more readable
+const formatDate = (date: Date) => {
+	// Ensure we're working with UTC dates
+	const utcDate = new Date(Date.UTC(
+		date.getUTCFullYear(),
+		date.getUTCMonth(),
+		date.getUTCDate()
+	));
+	return utcDate.toLocaleDateString('en-US', {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric',
+		timeZone: 'UTC'
+	});
+};
+
 // Process the content to remove tabindex from pre elements
 const processedContent = Content;
 ---
@@ -30,7 +46,7 @@ const processedContent = Content;
 		</div>
 		<article class="prose dark:prose-invert mx-auto fade-in blog-post">
 			<time class="text-sm text-gray-500 dark:text-gray-400 blog-date">
-				{new Date(pubDate).toLocaleDateString('en-US', { timeZone: 'UTC', month: 'long', day: 'numeric', year: 'numeric' })}
+				{formatDate(new Date(pubDate))}
 			</time>
 			<div class="mt-8 blog-content">
 				<Content />
