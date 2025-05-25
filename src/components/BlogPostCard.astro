@@ -7,6 +7,22 @@ interface Props {
 
 const { post } = Astro.props;
 const { title, description, pubDate } = post.data;
+
+// Format date to be more readable
+const formatDate = (date: Date) => {
+	// Ensure we're working with UTC dates
+	const utcDate = new Date(Date.UTC(
+		date.getUTCFullYear(),
+		date.getUTCMonth(),
+		date.getUTCDate()
+	));
+	return utcDate.toLocaleDateString('en-US', {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric',
+		timeZone: 'UTC'
+	});
+};
 ---
 
 <article class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
@@ -17,6 +33,6 @@ const { title, description, pubDate } = post.data;
 	</h2>
 	<p class="text-gray-600 dark:text-gray-300 mb-4">{description}</p>
 	<time class="text-sm text-gray-500 dark:text-gray-400">
-		{new Date(pubDate).toLocaleDateString()}
+		{formatDate(new Date(pubDate))}
 	</time>
 </article> 

@@ -11,6 +11,22 @@ const { posts } = Astro.props;
 const sortedPosts = [...posts].sort((a, b) => 
 	b.data.pubDate.getTime() - a.data.pubDate.getTime()
 );
+
+// Format date to be more readable
+const formatDate = (date: Date) => {
+	// Ensure we're working with UTC dates
+	const utcDate = new Date(Date.UTC(
+		date.getUTCFullYear(),
+		date.getUTCMonth(),
+		date.getUTCDate()
+	));
+	return utcDate.toLocaleDateString('en-US', {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric',
+		timeZone: 'UTC'
+	});
+};
 ---
 
 <aside id="sidebar" class="sidebar" aria-label="Blog navigation">
@@ -20,7 +36,7 @@ const sortedPosts = [...posts].sort((a, b) =>
 			<ul aria-label="Blog posts list" role="list">
 				{sortedPosts.map((post, index) => {
 					const pubDate = new Date(post.data.pubDate);
-					const formattedDate = pubDate.toLocaleDateString('en-US'); // MM-DD-YYYY format
+					const formattedDate = formatDate(pubDate);
 					return (
 						<>
 							{index > 0 && <hr class="post-separator" />}
