@@ -1,0 +1,59 @@
+---
+interface Props {
+  tag: string;
+  selected?: boolean;
+}
+const { tag, selected = false } = Astro.props;
+---
+<a href={`/blog/tag/${encodeURIComponent(tag)}`} class={`tag-pill${selected ? ' selected' : ''}`} aria-label={`Show all posts tagged ${tag}`}>
+  <span class="tag-label">{tag}</span>
+</a>
+
+<style>
+.tag-pill {
+  display: inline-block;
+  background: transparent;
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.3em 0.8em;
+  border-radius: 999px;
+  margin: 0 0.25em 0.5em 0;
+  text-decoration: none;
+  border: 1.5px solid var(--text);
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.1s;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+.tag-pill:hover, .tag-pill:focus, .tag-pill.selected {
+  background: var(--text);
+  color: var(--background);
+  border-color: var(--text);
+  transform: translateY(-2px) scale(1.04);
+}
+.tag-label {
+  letter-spacing: 0.02em;
+}
+:root.dark .tag-pill {
+  color: #fff;
+  border-color: #fff;
+}
+:root.dark .tag-pill:hover, :root.dark .tag-pill:focus, :root.dark .tag-pill.selected {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+@media (max-width: 600px) {
+  .tag-pill {
+    font-size: 0.8rem;
+    padding: 0.25em 0.7em;
+    margin: 0 0.2em 0.4em 0;
+    border-width: 1px;
+  }
+  .tag-pill:hover, .tag-pill:focus, .tag-pill.selected {
+    transform: translateY(-1px) scale(1.02);
+  }
+}
+</style> 

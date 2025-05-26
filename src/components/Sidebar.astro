@@ -31,7 +31,7 @@ const formatDate = (date: Date) => {
 
 <aside id="sidebar" class="sidebar" aria-label="Blog navigation">
 	<nav aria-labelledby="blog-posts-heading">
-		<h2 id="blog-posts-heading" aria-label="Blog Posts Navigation">Blog Posts</h2>
+		<a href="/blog/" id="blog-posts-heading" aria-label="Blog Posts Navigation" class="sidebar-heading-link"><h2>Blog Posts</h2></a>
 		<div class="blog-archive" role="list" aria-labelledby="blog-posts-heading">
 			<ul aria-label="Blog posts list" role="list">
 				{sortedPosts.map((post, index) => {
@@ -102,7 +102,8 @@ const formatDate = (date: Date) => {
 
 	.sidebar h2 {
 		margin: 0;
-		font-size: 1.5rem;
+		font-size: 1.75rem !important;
+		font-family: 'Inter', system-ui, -apple-system, sans-serif;
 		color: var(--text);
 	}
 
@@ -120,6 +121,7 @@ const formatDate = (date: Date) => {
 		color: var(--text);
 		text-decoration: none;
 		font-size: 1.1rem;
+		font-family: 'Inter', system-ui, -apple-system, sans-serif;
 		transition: color 0.2s ease;
 		display: inline;
 	}
@@ -142,5 +144,24 @@ const formatDate = (date: Date) => {
 
 	.blog-archive {
 		margin-top: 1rem;
+	}
+
+	.sidebar-heading-link {
+		display: inline-block;
+		color: var(--text);
+		text-decoration: none;
+		font-size: 1.75rem !important;
+		font-weight: bold;
+		margin: 0;
+		transition: color 0.2s ease;
+	}
+	.sidebar-heading-link:hover {
+		color: rgb(var(--accent));
+	}
+	.sidebar-heading-link h2 {
+		margin: 0;
+		font-size: inherit;
+		font-weight: inherit;
+		color: inherit;
 	}
 </style> 

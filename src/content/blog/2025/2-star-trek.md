@@ -3,6 +3,7 @@ title: "Captain Picard"
 description: "My thoughts about Captain Picard."
 pubDate: 2025-05-25
 draft: false
+tags: ["star trek"]
 ---
 
 ## Make it So: How Picard Shaped My Worldview

@@ -1,12 +1,13 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import Tag from './Tag.astro';
 
 interface Props {
 	post: CollectionEntry<'blog'>;
 }
 
 const { post } = Astro.props;
-const { title, description, pubDate } = post.data;
+const { title, description, pubDate, tags } = post.data;
 
 // Format date to be more readable
 const formatDate = (date: Date) => {
@@ -25,14 +26,86 @@ const formatDate = (date: Date) => {
 };
 ---
 
-<article class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
-	<h2 class="text-2xl font-semibold mb-2">
-		<a href={`/blog/${post.slug}`} class="hover:text-purple-600 dark:hover:text-purple-400">
-			{title}
-		</a>
-	</h2>
-	<p class="text-gray-600 dark:text-gray-300 mb-4">{description}</p>
-	<time class="text-sm text-gray-500 dark:text-gray-400">
-		{formatDate(new Date(pubDate))}
-	</time>
-</article> 
+<a href={`/blog/${post.slug}`} class="blog-card-link" aria-label={`Read blog post: ${title}`} tabindex="0">
+	<article class="blog-card">
+		<h2 class="blog-title">{title}</h2>
+		<p class="blog-desc">{description}</p>
+		{Array.isArray(tags) && tags.length > 0 && (
+			<div class="blog-tags">
+				{tags.map((tag: string) => (
+					<Tag tag={tag} />
+				))}
+			</div>
+		)}
+		<time class="blog-date">
+			{formatDate(new Date(pubDate))}
+		</time>
+	</article>
+</a>
+
+<style>
+.blog-card-link {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+	transition: transform 0.2s ease;
+	margin-bottom: 3rem;
+}
+
+.blog-card-link:hover {
+	transform: translateY(-2px);
+}
+
+.blog-card {
+	padding: 2rem 0;
+	background: transparent;
+	border-bottom: 1px solid #e5e7eb;
+	transition: all 0.2s ease;
+	position: relative;
+}
+
+.blog-card-link:hover .blog-card {
+	border-bottom-color: #9ca3af;
+}
+
+:root.dark .blog-card {
+	border-bottom: 1px solid #374151;
+}
+
+:root.dark .blog-card-link:hover .blog-card {
+	border-bottom-color: #6b7280;
+}
+
+.blog-tags :global(.tag-pill) {
+	position: relative;
+	z-index: 1;
+}
+
+.blog-title {
+	font-size: 2rem;
+	font-family: 'Inter', system-ui, -apple-system, sans-serif;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+	margin-top: 0;
+}
+
+.blog-desc {
+	color: var(--text);
+	opacity: 0.85;
+	font-size: 1.1rem;
+	font-family: 'Inter', system-ui, -apple-system, sans-serif;
+	margin-bottom: 1.25rem;
+}
+
+.blog-tags {
+	margin-bottom: 1.25rem;
+}
+
+.blog-date {
+	font-size: 0.95rem;
+	font-family: 'Inter', system-ui, -apple-system, sans-serif;
+	color: var(--text);
+	opacity: 0.6;
+	letter-spacing: 0.04em;
+}
+</style> 
