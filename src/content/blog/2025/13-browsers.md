@@ -11,7 +11,7 @@ The internet, a vast ocean of information and distraction, demands a vessel to n
 
 A critical factor in this pursuit is **cross-platform compatibility**. As someone who regularly juggles Windows, Mac, and occasionally Linux, a browser that seamlessly works across multiple operating systems is non-negotiable. This immediately rules out certain contenders, like Apple's Safari, which is tied to the macOS ecosystem. Beyond that, I've also found Safari's interface to be too restrictive and its extension ecosystem lacking for my needs.
 
-### ![Brave](https://brave.com/static-assets/images/cropped-brave_appicon_release-32x32.png) Brave: A Long-Standing Companion (with caveats) 
+### ![Brave](https://brave.com/static-assets/images/cropped-brave_appicon_release-32x32.png) Brave: A Long-Standing Companion (with caveats)
 
 For a considerable stretch of time, Brave has been my daily driver. Its built-in ad blocker and privacy features were a huge draw, offering a cleaner, less cluttered browsing experience. The promise of a more secure web, free from invasive trackers, resonated deeply with my desire for a less surveilled online existence.
 
