@@ -1,7 +1,7 @@
 ---
 title: "Beer!"
 description: "Why Beer is great and specifically IPA's."
-pubDate: 2025-07-07
+pubDate: 2025-07-06
 draft: true
 ---
 
@@ -14,6 +14,8 @@ There’s something about cracking open a cold IPA that just feels right. For me
 ---
 
 ## 🌟 The Taste: Bold, Bright, and Beautiful
+
+![Me and Beer](https://utfs.io/f/avP9Ws4j0vyMvyVlSvpQ4lUyEz25fNmVHKwkADh8XYjcBbdF)
 
 > *“The first sip hits you with a burst of citrus and pine, followed by a subtle sweetness that balances out the bitterness.”*
 

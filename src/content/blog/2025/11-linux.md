@@ -7,7 +7,7 @@ draft: true
 
 # Jared's Linux Installs: Automating Your Linux Setup
 
-Are you tired of manually setting up a new Linux system every time? Do you wish for a quicker, more consistent way to get your environment just right? Look no further than **Jared's Linux Installs**, a fantastic collection of shell scripts designed for automated Linux setup and configuration, found within the [Jaredy899/linux](https://github.com/Jaredy899/linux.git) repository.
+Are you tired of manually setting up a new Linux system every time? Do you wish for a quicker, more consistent way to get your environment just right? Look no further than **[Jared's Linux Installs](https://github.com/Jaredy899/linux.git)**, a fantastic collection of shell scripts designed for automated Linux setup and configuration.
 
 This toolkit isn't just about automation; it's also a living collection of Jared's personal Linux configurations. It helps you quickly set up a new Linux system with essential utilities and optimized settings, providing a consistent environment across various distributions.
 
@@ -17,7 +17,7 @@ Jared's Linux Installs comes packed with capabilities to streamline your setup a
 
 * **Post-install Setup**: Install standard utilities and configure basic system settings right after your OS is fresh.
 * **Comprehensive Configuration Collection**: Beyond the automated scripts, the repository is also home to various personal configuration files, notably including a detailed **Nix configuration**, showcasing how different Linux distributions are configured and maintained.
-* **Linux Utility**: Run Chris Titus Tech's Linutil for additional system optimizations and tweaks. Jared has updated this utility to fix most bugs and added some custom functionality.
+* **Linux Utility**: Run [Chris Titus Tech's Linutil](https://github.com/ChrisTitusTech/linutil) for additional system optimizations and tweaks. I have updated this utility to fix most bugs and added some custom functionality.
 * **SSH Key Management**: Easily add and configure SSH keys for secure remote access.
 * **Network Drive Setup**: Mount and configure network storage with ease.
 * **Tailscale VPN**: Install and configure Tailscale for secure, zero-config networking across your devices.
@@ -48,7 +48,7 @@ Once you run the main script, you'll be presented with a clear menu of options:
 ![Linux](https://22yjaf7c2x.ufs.sh/f/avP9Ws4j0vyMOIaMRl23vacZSkjMnmwdb8sVBF73GATHRUyX)
 
 1. **Run Post Install Script** - Install and configure essential utilities.
-2. **Run Linux Utility** - Launch the Jared Linux Utility for system tweaks.
+2. **Run Linux Utility** - Launch the [Jared Linux Utility](https://github.com/Jaredy899/jaredlinutil) for system tweaks.
 3. **Add SSH Key** - Configure SSH key authentication.
 4. **Install a Network Drive** - Set up network storage mounts.
 5. **Install Tailscale** - Set up Tailscale VPN for secure networking.

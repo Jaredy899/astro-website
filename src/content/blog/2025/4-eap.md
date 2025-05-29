@@ -1,7 +1,7 @@
 ---
 title: "Early Episode Psychosis"
 description: "What I learned from my recent conference"
-pubDate: 2025-06-09
+pubDate: 2025-06-08
 draft: true
 ---
 
@@ -53,6 +53,8 @@ A particularly important discussion centered around **long-acting injectables (L
 - **Early Intervention**: Starting with LAIs early in treatment can establish a strong foundation for recovery. It's often easier to maintain a treatment regimen than to restart one after a relapse.
 
 The conference highlighted that LAIs should be considered as a first-line treatment option, not just as a solution for non-adherence. This aligns with my experience and preference for LAIs in early psychosis care. The key is to present LAIs as a positive choice for better outcomes rather than a last resort.
+
+> In a later blog, I'll explain more about the different Long Acting Injectables and their benefits.
 
 ### 5. Cannabis and Psychosis: A Complex Relationship
 
