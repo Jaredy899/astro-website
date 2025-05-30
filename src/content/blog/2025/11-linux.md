@@ -2,10 +2,11 @@
 title: "My Linux Configuration"
 description: "How I configure different linux Distributions"
 pubDate: 2025-07-27
-draft: true
+draft: false
 ---
-
 # Jared's Linux Installs: Automating Your Linux Setup
+
+![Linux](https://utfs.io/f/avP9Ws4j0vyMiDeH2YMXScWJArkKqwvUa7es1g0IpBoFG4mj)
 
 Are you tired of manually setting up a new Linux system every time? Do you wish for a quicker, more consistent way to get your environment just right? Look no further than **[Jared's Linux Installs](https://github.com/Jaredy899/linux.git)**, a fantastic collection of shell scripts designed for automated Linux setup and configuration.
 
