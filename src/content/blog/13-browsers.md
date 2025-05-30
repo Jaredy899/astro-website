@@ -34,10 +34,14 @@ Over time, a creeping sense of unease began to settle in. Brave, while
 initially lean, started to feel... bloated. The incessant push for "Web3"
 features, the integrated crypto wallet, and the general feeling of being
 constantly nudged towards their blockchain ecosystem became a significant point
-of contention. While some might embrace these technologies, for me, they felt
-like unnecessary baggage, cluttering what should be a straightforward browsing
-tool. I still keep it around for certain tasks, but it's no longer my primary
-window to the web.
+of contention for some. However, despite these additions, I've found that the
+Web3 components can be easily disabled or ignored, allowing Brave to function
+as a solid, privacy-focused alternative to Chrome without the inherent privacy
+concerns of Google's ecosystem. While some might find the presence of these
+technologies distracting, I personally appreciate Brave's commitment to
+blocking ads and trackers by default, making it a viable option for those
+seeking a more private browsing experience. I still keep it around for certain
+tasks, but it's no longer my primary window to the web.
 
 ### ![Chrome](https://avatars.githubusercontent.com/u/1778935?s=48&v=4) The Chrome Conundrum and Edge's Annoyances
 
