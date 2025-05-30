@@ -1,13 +1,12 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import Tag from './Tag.astro';
 
 interface Props {
 	post: CollectionEntry<'blog'>;
 }
 
 const { post } = Astro.props;
-const { title, description, pubDate, tags } = post.data;
+const { title, description, pubDate } = post.data;
 
 // Format date to be more readable
 const formatDate = (date: Date) => {
@@ -30,13 +29,6 @@ const formatDate = (date: Date) => {
 	<article class="blog-card">
 		<h2 class="blog-title">{title}</h2>
 		<p class="blog-desc">{description}</p>
-		{Array.isArray(tags) && tags.length > 0 && (
-			<div class="blog-tags">
-				{tags.map((tag: string) => (
-					<Tag tag={tag} />
-				))}
-			</div>
-		)}
 		<time class="blog-date">
 			{formatDate(new Date(pubDate))}
 		</time>
@@ -76,11 +68,6 @@ const formatDate = (date: Date) => {
 	border-bottom-color: #6b7280;
 }
 
-.blog-tags :global(.tag-pill) {
-	position: relative;
-	z-index: 1;
-}
-
 .blog-title {
 	font-size: 2rem;
 	font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -94,10 +81,6 @@ const formatDate = (date: Date) => {
 	opacity: 0.85;
 	font-size: 1.1rem;
 	font-family: 'Inter', system-ui, -apple-system, sans-serif;
-	margin-bottom: 1.25rem;
-}
-
-.blog-tags {
 	margin-bottom: 1.25rem;
 }
 
