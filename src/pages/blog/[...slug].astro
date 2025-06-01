@@ -108,18 +108,17 @@ const processedContent = Content;
 		max-width: 800px;
 	}
 
-	/* Add specific iPad Air and Zenbook Fold adjustments */
-	@media screen and (min-width: 820px) and (max-width: 853px),
-	       screen and (min-width: 853px) and (max-width: 1280px) {
-		.container {
-			padding-left: 5rem !important; /* Add more padding on the left to account for sidebar */
-			padding-right: 2rem !important;
-		}
+/* Add specific tablet and desktop adjustments */
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .container {
+    padding-left: 5rem !important; /* Add more padding on the left to account for sidebar */
+    padding-right: 2rem !important;
+  }
 
-		.blog-date {
-			margin-left: 0.5rem; /* Add some margin to the date */
-		}
-	}
+  .blog-date {
+    margin-left: 0.5rem; /* Add some margin to the date */
+  }
+}
 
 	.logo-container {
 		width: 40px;
