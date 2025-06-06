@@ -36,12 +36,14 @@ I've come to love every aspect of flying, even the ones that make others nervous
 - The subtle changes in air pressure that make your ears pop
 - The way the world looks so different from 30,000 feet
 
-## 🛫 A Lifelong Passion
+## 🛫 A Lifelong Passion, and a Bittersweet Reality
 
 Even though I used flight simulator most of my life, my knowledge of aviation became stronger after watching pilots on YouTube. I still spend hours listening to them explain how each of their airplanes works and love listening to them talking to ATC.
 
+This deep dive into the world of aviation has only intensified my passion, but it also brings a touch of sadness. For various personal reasons, including my Functional Neurological Disorder (FND), becoming a pilot myself isn't a possibility for me. It's a bummer, to say the least, to dream so vividly of taking the controls and soaring through the sky, yet knowing that it's a path I can't physically pursue. Still, that doesn't diminish the immense joy and fascination I find in every aspect of flight, whether it's through a screen or from a passenger window.
+
 ## 🌅 Looking to the Future
 
-My passion for flying isn't just about the mechanics of flight – it was about the freedom, the perspective, and the endless possibilities that aviation represents.
+My passion for flying isn't just about the mechanics of flight – it's about the freedom, the perspective, and the endless possibilities that aviation represents. Even if I can't be in the cockpit, I'll continue to live vicariously through the amazing pilots who share their journeys on YouTube, absorbing every detail and finding immense joy in their experiences. And of course, I'll keep flying as often as I can, cherishing every moment spent among the clouds.
 
 The next time you're at an airport, take a moment to breathe in that unique airport air, listen to the symphony of sounds, and maybe you'll understand why, for me, flying isn't just a mode of transportation – it's a way of life.

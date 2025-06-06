@@ -21,28 +21,6 @@ restrictive and its extension ecosystem lacking for my needs. My ideal browser
 must also embrace the spirit of **open source**, prioritizing transparency,
 community-driven development, and user control.
 
-### ![Brave](https://avatars.githubusercontent.com/u/12301619?s=48&v=4) Brave: A Long-Standing Companion (with caveats)
-
-For a considerable stretch of time, Brave has been my daily driver. Its
-built-in ad blocker and privacy features were a huge draw, offering a cleaner,
-less cluttered browsing experience. The promise of a more secure web, free from
-invasive trackers, resonated deeply with my desire for a less surveilled
-online existence. While Brave has its roots in open source, its direction began
-to diverge from my core preferences.
-
-Over time, a creeping sense of unease began to settle in. Brave, while
-initially lean, started to feel... bloated. The incessant push for "Web3"
-features, the integrated crypto wallet, and the general feeling of being
-constantly nudged towards their blockchain ecosystem became a significant point
-of contention for some. However, despite these additions, I've found that the
-Web3 components can be easily disabled or ignored, allowing Brave to function
-as a solid, privacy-focused alternative to Chrome without the inherent privacy
-concerns of Google's ecosystem. While some might find the presence of these
-technologies distracting, I personally appreciate Brave's commitment to
-blocking ads and trackers by default, making it a viable option for those
-seeking a more private browsing experience. I still keep it around for certain
-tasks, but it's no longer my primary window to the web.
-
 ### ![Chrome](https://avatars.githubusercontent.com/u/1778935?s=48&v=4) The Chrome Conundrum and Edge's Annoyances
 
 Let's be clear: Google Chrome is out of the question for me. While the
@@ -122,21 +100,21 @@ me credit cards felt out of place for a web browser and ultimately made me to
 question its true intentions, veering away from the open and user-centric model
 I prefer.
 
-### ![Zen](https://avatars.githubusercontent.com/u/165225155?s=48&v=4) Zen: The Current Contender (A True Open-Source Spirit)
+### ![Zen](https://avatars.githubusercontent.com/u/165225155?s=48&v=4) Zen: A True Open-Source Spirit
 
-And so, my current browser is Zen. Why Zen? **Its dedication to being truly
-open source is the primary draw.** In a landscape dominated by proprietary
-software and opaque data practices, Zen stands out by championing transparency,
+And so, Zen stands out as a compelling contender. Why Zen? **Its dedication to
+being truly open source is the primary draw.** In a landscape dominated by
+proprietary software and opaque data practices, Zen champions transparency,
 community-driven development, and ultimately, greater user control. Knowing
 that I can inspect its code, contribute to its growth, and rely on a community
 for its direction gives me unparalleled peace of mind.
 
-Beyond its open-source foundation, Zen offers other compelling benefits. For
-my current web development endeavors, the ability to experiment with View
+Beyond its open-source foundation, Zen offers other compelling benefits. For my
+current web development endeavors, the ability to experiment with View
 Transitions is a significant advantage. **Recently, Zen is actively
-experimenting with View Transitions**, much like Firefox. My main website
-extensively uses View Transitions to create a smooth, app-like experience, and
-having a browser that allows me to test and preview these features is a game-changer.
+experimenting with View Transitions.** My main website extensively uses View
+Transitions to create a smooth, app-like experience, and having a browser that
+allows me to test and preview these features is a game-changer.
 
 The frustrating part, however, is that **View Transitions are not enabled by
 default in Zen**. It's the same story with Firefox, which also supports them but
@@ -148,26 +126,54 @@ reloads, but having to manually enable this feature every time feels like a
 missed opportunity for a smoother out-of-the-box experience.
 
 Nevertheless, Zen has truly won me over with its thoughtful user experience,
-which feels both modern and respectful of user privacy due to its
-open-source foundation. The **unique compact mode** is a revelation, maximizing
-screen real estate without sacrificing functionality. And for a keyboard
-shortcut enthusiast like myself, Zen's **excellent support for keyboard
-shortcuts** makes navigating and performing tasks incredibly efficient.
-Furthermore, the way the **sidebar gracefully opens when moving the mouse**
-towards it adds a touch of fluid interactivity that feels genuinely intuitive.
-These seemingly small details contribute to a surprisingly refined and enjoyable
-browsing experience.
+which feels both modern and respectful of user privacy due to its open-source
+foundation. The **unique compact mode** is a revelation, maximizing screen real
+estate without sacrificing functionality. And for a keyboard shortcut enthusiast
+like myself, Zen's **excellent support for keyboard shortcuts** makes navigating
+and performing tasks incredibly efficient. Furthermore, the way the **sidebar
+gracefully opens when moving the mouse** towards it adds a touch of fluid
+interactivity that feels genuinely intuitive. These seemingly small details
+contribute to a surprisingly refined and enjoyable browsing experience.
 
-Zen, at its core, feels lighter and more focused than many of its competitors.
-It’s early days, but the initial experience has been remarkably positive. It’s
-a testament to how a true open-source spirit, combined with thoughtful design
-and useful features, can profoundly impact a user's choice.
+Zen, at its core, feels purpose-built and focused. It’s early days, but the
+initial experience has been remarkably positive. It’s a testament to how a true
+open-source spirit, combined with thoughtful design and useful features, can
+profoundly impact a user's choice.
+
+### ![Brave](https://avatars.githubusercontent.com/u/12301619?s=48&v=4) Brave: Still My Daily Driver (customized for privacy)
+
+For a considerable stretch of time, Brave has been my daily driver, and it
+continues to be my primary choice despite its quirks. Its built-in ad blocker
+and strong privacy features were a huge draw, offering a cleaner, less
+cluttered browsing experience. The promise of a more secure web, free from
+invasive trackers, resonated deeply with my desire for a less surveilled
+online existence. While Brave has its roots in open source, its direction began
+to diverge from my core preferences with the integration of "Web3" features.
+
+Over time, a creeping sense of unease began to settle in as the incessant push
+for "Web3" features, the integrated crypto wallet, and the general feeling of
+being constantly nudged towards their blockchain ecosystem became a significant
+point of contention. **However, despite these additions, I've found that the
+Web3 components can be easily disabled or ignored through Brave's settings,
+allowing it to function as a solid, privacy-focused alternative to Chrome
+without the inherent privacy concerns of Google's ecosystem. While some might
+find the mere presence of these technologies distracting, I personally
+appreciate Brave's commitment to blocking ads and trackers by default, making
+it a viable option for those seeking a more private browsing experience once it's
+customized to strip out the Web3 bloat.**
+
+Brave, once its Web3 features are toned down and it's configured to my liking,
+delivers a remarkably efficient and focused browsing experience. It’s a
+testament to how a strong focus on privacy, combined with thoughtful design and
+useful features, can profoundly impact a user's choice, even when a bit of initial
+customization is required.
 
 ### The Never-Ending Story
 
 The quest for the perfect web browser is, perhaps, a never-ending one. Technology
-evolves, new features emerge, and our needs as users shift. For now, Zen holds
-the crown, primarily due to its strong open-source commitment and its
-well-designed interface elements, as well as its ongoing experimentation with
-View Transitions (once enabled). But I know, deep down, that the search will
-continue. And that, in itself, is part of the fun.
+evolves, new features emerge, and our needs as users shift. For now, Brave holds
+the crown as my daily driver, primarily due to its strong privacy commitment (once
+customized to remove Web3 elements) and its efficient browsing experience. Zen
+remains a strong contender for its pure open-source spirit and excellent
+development features. But I know, deep down, that the search will continue. And
+that, in itself, is part of the fun.
