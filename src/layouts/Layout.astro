@@ -76,10 +76,27 @@ const sortedYears = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a
 	const handleSidebarToggleClick = () => {
 		const sidebar = document.getElementById("sidebar");
 		const overlay = document.getElementById("sidebar-overlay");
+		
 		if (sidebar && overlay) {
-			sidebar.classList.toggle("active");
-			overlay.classList.toggle("active");
-			document.body.classList.toggle("sidebar-open");
+			const isOpen = sidebar.classList.contains('open');
+			
+			if (isOpen) {
+				sidebar.classList.remove('open');
+				overlay.classList.remove('active');
+			} else {
+				sidebar.classList.add('open');
+				overlay.classList.add('active');
+			}
+		}
+	};
+
+	const handleOverlayClick = () => {
+		const sidebar = document.getElementById("sidebar");
+		const overlay = document.getElementById("sidebar-overlay");
+		
+		if (sidebar && overlay) {
+			sidebar.classList.remove('open');
+			overlay.classList.remove('active');
 		}
 	};
 
@@ -92,8 +109,8 @@ const sortedYears = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a
 			sidebarToggleButton.addEventListener("click", handleSidebarToggleClick);
 		}
 		if (overlay) {
-			overlay.removeEventListener("click", handleSidebarToggleClick);
-			overlay.addEventListener("click", handleSidebarToggleClick);
+			overlay.removeEventListener("click", handleOverlayClick);
+			overlay.addEventListener("click", handleOverlayClick);
 		}
 	};
 
