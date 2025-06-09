@@ -161,6 +161,7 @@ const formatDate = (date: Date) => {
 		justify-content: space-between;
 		align-items: center;
 		padding: 1.5rem;
+		padding-left: 4rem; /* Add extra padding to avoid overlap with toggle button */
 		border-bottom: 1px solid var(--text);
 	}
 
@@ -251,6 +252,10 @@ const formatDate = (date: Date) => {
 	@media (max-width: 768px) {
 		.blog-sidebar {
 			width: 100%;
+		}
+		
+		.sidebar-header {
+			padding-left: 3.5rem; /* Slightly less padding on mobile */
 		}
 	}
 </style> 
