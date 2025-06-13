@@ -15,7 +15,7 @@ There’s something about cracking open a cold IPA that just feels right. For me
 
 ## 🌟 The Taste: Bold, Bright, and Beautiful
 
-![Me and Beer](https://utfs.io/f/avP9Ws4j0vyMvyVlSvpQ4lUyEz25fNmVHKwkADh8XYjcBbdF)
+![Me and Beer](https://qmpdliftraf4pov3.public.blob.vercel-storage.com/beer%28me%29-YsV88J32Ch14680vyJHBEJbJQ2WpVE.webp)
 
 > *“The first sip hits you with a burst of citrus and pine, followed by a subtle sweetness that balances out the bitterness.”*
 

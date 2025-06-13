@@ -23,7 +23,7 @@ A comprehensive set of scripts to automate setting up and configuring macOS envi
 - **macOS Settings**: Apply optimal system settings for development
 - **SSH Key Setup**: Automate SSH key generation and GitHub integration
 
-![Mac Setup](https://22yjaf7c2x.ufs.sh/f/avP9Ws4j0vyMZcAWdKuJrPdyjXtn982fkAIm46GK3LZcHNh7)
+![Mac Setup](https://qmpdliftraf4pov3.public.blob.vercel-storage.com/mac-setup-gXNVXltXbqBZl0ghl3mX2kW4POuGyR.webp)
 
 ### 🎯 What's New
 
@@ -40,4 +40,4 @@ To get started, open your terminal and run:
 sh <(curl -fsSL jaredcervantes.com/mac)
 ```
 
-![fastfetch-mac](https://22yjaf7c2x.ufs.sh/f/avP9Ws4j0vyMseoPBmY3meuklwVyXKRFOhpbnxdo9aWUtzMP)
+![fastfetch-mac](https://qmpdliftraf4pov3.public.blob.vercel-storage.com/fastfetch-mac-pbAGCG2s6AYvLC0PW1U03Pdzh2nj8X.webp)
