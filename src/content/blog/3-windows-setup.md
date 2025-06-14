@@ -7,7 +7,11 @@ draft: false
 
 # 🖥️ My Windows Setup
 
+---
+
 ![Windows](https://avatars.githubusercontent.com/u/6154722?s=100&v=4)
+
+---
 
 This is how I set up my Windows machine quickly with all my presets and things how I like it.
 

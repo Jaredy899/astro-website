@@ -55,7 +55,7 @@ open-source ethos. It's a no-frills, Chromium-based browser that focuses on
 performance and a clean interface, stripping away much of the proprietary
 bloat. What I particularly love about it is its ability to easily sync all my
 configurations, making it a dream for quick setups across different machines.
-The only drawback? Its update schedule. While perfectly usable, I prefer a
+The only drawback? Its update schedule. It's maintained by one person. While perfectly usable, I prefer a
 browser that receives more frequent updates to ensure the latest security
 patches and feature improvements. Still, for a simple, fast browsing experience
 rooted in open-source principles, Thorium remains a strong contender.

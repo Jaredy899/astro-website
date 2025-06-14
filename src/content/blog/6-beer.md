@@ -7,8 +7,6 @@ draft: true
 
 # 🍺 Why I Love IPAs
 
-## (Especially Voodoo Ranger Imperial IPA)
-
 There’s something about cracking open a cold IPA that just feels right. For me, it’s more than just a drink—it’s an experience, a ritual, and sometimes, a little bit of therapy. If you’ve ever wondered why people like me are so obsessed with IPAs, let me take you on a little journey, with a special shoutout to my all-time favorite: **Voodoo Ranger Imperial IPA**.
 
 ---
@@ -19,13 +17,13 @@ There’s something about cracking open a cold IPA that just feels right. For me
 
 > *“The first sip hits you with a burst of citrus and pine, followed by a subtle sweetness that balances out the bitterness.”*
 
-IPAs (India Pale Ales) are known for their bold hop flavors, and **Voodoo Ranger Imperial IPA** takes that to another level. Here’s what I love about it:
+IPAs (India Pale Ales) are known for their bold hop flavors, and **Imperial IPA** takes that to another level. Here’s what I love about it:
 
 - **Citrus & Pine:** That unmistakable hoppy punch.
 - **Tropical Fruit Notes:** A complexity that keeps every sip interesting.
 - **Caramel Sweetness:** Balances the bitterness perfectly.
 - **Rich Malt Backbone:** Adds depth and smoothness.
-- **Strong but Smooth:** At 9% ABV, it’s powerful but never overwhelming.
+- **Strong but Smooth:** At 9% ABV, it’s powerful but only sometimes overwhelming...
 
 It’s the kind of beer that demands your attention and rewards you for slowing down and savoring it.
 
@@ -35,11 +33,9 @@ Of course I have visited the New Belgium Brewery in Asheville, NC to have a tast
 
 ## 🧘 The Feeling: Calm in a Glass
 
-Here’s where it gets personal. I live with **Functional Neurological Disorder (FND)**—something I’ll talk about more in another blog. But for now, just know that life can get overwhelming, and my mind and body don’t always cooperate.
-
 > *“There’s a unique kind of calm that comes from sitting down with a good IPA.”*
 
-The ritual of pouring, watching the foam settle, and taking that first sip—it’s grounding. **Voodoo Ranger Imperial IPA** is my go-to for those moments when I need to unwind. It’s not about drinking to escape—it’s about finding a little bit of comfort and joy in a glass.
+The ritual of pouring, watching the foam settle, and taking that first sip—it’s grounding. **Imperial IPA** is my go-to for those moments when I need to unwind. It’s not about drinking to escape—it’s about finding a little bit of comfort and joy in a glass.
 
 ---
 
@@ -76,5 +72,3 @@ With so many IPAs out there, why does **Voodoo Ranger Imperial IPA** stand out?
 So here’s to IPAs, to new adventures, and to finding comfort in the little things. And if you haven’t tried Voodoo Ranger Imperial IPA yet, do yourself a favor—grab a can, take a sip, and see what all the fuss is about.
 
 > **Cheers! 🍻**
-
-*Stay tuned for a blog, where I’ll talk more about FND.*
