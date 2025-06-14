@@ -88,7 +88,7 @@ built entirely on open standards and transparent development. However, as
 [Theo's](https://t3.gg/) video pointed out, it often feels like it's playing
 catch-up in terms of certain modern web features and performance optimizations.
 While it's certainly a viable open-source option, I find myself wanting a
-slightly more cutting-edge experience for my daily browsing.
+slightly more cutting-edge experience for my daily browsing. Also, in the past year, funding has been an issue which puts Firefox in a precarious place.
 
 ### ![Opera](https://avatars.githubusercontent.com/u/191904?s=48&v=4) Opera's Oddities
 
