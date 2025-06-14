@@ -6,6 +6,7 @@ import Sidebar from '../components/Sidebar.astro';
 import ThemeToggle from '../components/ThemeToggle.astro';
 import CopyButtonScript from '../components/CopyButtonScript.astro';
 import Analytics from '@vercel/analytics/astro';
+import  SpeedInsights  from "@vercel/speed-insights/astro";
 
 interface Props {
 	title: string;
@@ -65,6 +66,7 @@ const sortedYears = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a
 		</main>
 		<CopyButtonScript />
 		<Analytics />
+		<SpeedInsights />
 	</body>
 </html>
 
