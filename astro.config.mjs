@@ -13,5 +13,13 @@ export default defineConfig({
     shikiConfig: {
       theme: 'github-dark'
     }
+  },
+
+  redirects: {
+    // Setup script redirects
+    '/win': 'https://raw.githubusercontent.com/Jaredy899/win/main/first-setup.ps1',
+    '/mac': 'https://raw.githubusercontent.com/Jaredy899/mac/main/setup.sh',
+    '/linux': 'https://raw.githubusercontent.com/Jaredy899/linux/refs/heads/main/linux.sh',
+    '/debian': 'https://raw.githubusercontent.com/Jaredy899/linux/refs/heads/main/config_changes/preseed.cfg',
   }
 });
