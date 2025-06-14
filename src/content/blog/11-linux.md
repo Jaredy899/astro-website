@@ -4,6 +4,7 @@ description: "How I configure different linux Distributions"
 pubDate: 2025-07-27
 draft: true
 ---
+
 # Jared's Linux Installs: Automating Your Linux Setup
 
 ---

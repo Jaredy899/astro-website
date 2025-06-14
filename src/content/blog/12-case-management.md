@@ -1,6 +1,6 @@
 ---
-title: "The Endless Quest for the Perfect Browser: A Chronicle"
-description: "My ongoing search for the ideal web browser."
+title: "The Importance of Case Management in First Episode Psychosis Recovery"
+description: "How case management can help individuals with first episode psychosis."
 pubDate: 2025-08-17
 draft: true
 ---
