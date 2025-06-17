@@ -16,24 +16,6 @@ interface Props {
 const { title, description } = Astro.props;
 const allPosts = await getCollection('blog');
 const posts = allPosts.filter(post => !post.data.draft);
-
-// Group posts by year and month
-const postsByYear = posts.reduce((acc, post) => {
-	const year = post.data.pubDate.getFullYear();
-	const month = post.data.pubDate.getMonth();
-	
-	if (!acc[year]) {
-		acc[year] = {};
-	}
-	if (!acc[year][month]) {
-		acc[year][month] = [];
-	}
-	acc[year][month].push(post);
-	return acc;
-}, {} as Record<number, Record<number, CollectionEntry<'blog'>[]>>);
-
-// Sort years and months in descending order
-const sortedYears = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a));
 ---
 
 <!doctype html>
