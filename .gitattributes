@@ -1,2 +1,0 @@
-# treat all .mdx files as Markdown
-*.mdx linguist-language=Markdown

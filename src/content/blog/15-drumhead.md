@@ -35,10 +35,10 @@ The episode masterfully illustrates the seductive, yet perilous, path from legit
 
 We see echoes of Satie's tactics in today's political discourse:
 
-*   **The demonization of dissent:** Voicing an alternative viewpoint or questioning a popular narrative can quickly lead to accusations of being an "enemy," unpatriotic, or part of a larger, insidious plot.
-*   **The erosion of nuance:** Complex issues are reduced to simplistic good-versus-evil narratives, leaving no room for compromise or understanding.
-*   **The power of a "witch hunt" mentality:** Once suspicion takes hold, it can be incredibly difficult to dislodge, leading to the destruction of reputations and the breakdown of trust.
-*   **The appeal of strong leaders promising absolute solutions:** Satie's charismatic authority initially garners support, demonstrating how readily people can fall under the spell of those who promise to purge society of its perceived ills.
+* **The demonization of dissent:** Voicing an alternative viewpoint or questioning a popular narrative can quickly lead to accusations of being an "enemy," unpatriotic, or part of a larger, insidious plot.
+* **The erosion of nuance:** Complex issues are reduced to simplistic good-versus-evil narratives, leaving no room for compromise or understanding.
+* **The power of a "witch hunt" mentality:** Once suspicion takes hold, it can be incredibly difficult to dislodge, leading to the destruction of reputations and the breakdown of trust.
+* **The appeal of strong leaders promising absolute solutions:** Satie's charismatic authority initially garners support, demonstrating how readily people can fall under the spell of those who promise to purge society of its perceived ills.
 
 ### Upholding Core Principles
 
@@ -46,22 +46,13 @@ Picard's unwavering commitment to the principles of justice, even in the face of
 
 "The Drumhead" is a vital watch in our current times. It's a stark warning about the dangers of allowing fear to dictate our actions and the imperative to defend the fundamental tenets of justice, even when it's uncomfortable or unpopular. Because if we don't, we risk becoming the very thing we claim to fight against.
 
-{/* The Drumhead Video Embed (Responsive and Centered) */}
-<div style={{textAlign: 'center'}}>
+<div style="position: relative; width: 100%; max-width: 560px; margin: 0 auto; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe
-    width="100%"
-    height="auto"
     src="https://www.youtube.com/embed/CbQvCzWkATA?si=uEZsqno7prfnjMyV"
     title="YouTube video player"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerPolicy="strict-origin-when-cross-origin"
-    allowFullScreen
-    style={{
-      maxWidth: '560px', /* Optional: Set a max width if you don't want it to fill extremely wide screens */
-      aspectRatio: '16/9',
-      display: 'block', /* Make it a block element to be centered */
-      margin: '0 auto', /* Center the block element */
-      border: 'none' /* Replaces frameBorder="0" */
-    }}
-  />
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; display: block;"
+  ></iframe>
 </div>

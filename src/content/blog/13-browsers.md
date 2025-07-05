@@ -48,6 +48,16 @@ proved to be its undoing. While I appreciate the flexibility, the initial
 investment of time and effort to configure it to my liking was a barrier I
 couldn't quite overcome. Sometimes, you just want to plug and play.
 
+### ![Opera](https://avatars.githubusercontent.com/u/191904?s=48&v=4) Opera's Oddities
+
+Opera, with its sleek design and built-in VPN, seemed promising at first. While
+it leverages some open-source components, its overall direction and business
+model quickly became a concern. My experience was quickly soured by what felt
+like an aggressive push for financial services. The repeated attempts to sell
+me credit cards felt out of place for a web browser and ultimately made me to
+question its true intentions, veering away from the open and user-centric model
+I prefer.
+
 ### ![Thorium](https://avatars.githubusercontent.com/u/45863095?s=48&v=4) Thorium: A Promising Underdog
 
 Thorium holds a special place in my heart precisely because of its pure
@@ -62,24 +72,16 @@ rooted in open-source principles, Thorium remains a strong contender.
 
 ### ![Firefox](https://avatars.githubusercontent.com/u/148481591?s=48&v=4) Firefox: The Old Faithful (with a catch)
 
-{/* Theo's Video Embed (Responsive and Centered) */}
-<div style={{textAlign: 'center'}}>
+<!-- Theo's Video Embed (Responsive and Centered) -->
+<div style="position: relative; width: 100%; max-width: 560px; margin: 0 auto; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe
-    width="100%"
-    height="auto"
     src="https://www.youtube.com/embed/mmjUlFIaNLE?si=Ig8Gw9Ope-PZ7m8Q"
     title="YouTube video player"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerPolicy="strict-origin-when-cross-origin"
-    allowFullScreen
-    style={{
-      maxWidth: '560px', /* Optional: Set a max width if you don't want it to fill extremely wide screens */
-      aspectRatio: '16/9',
-      display: 'block', /* Make it a block element to be centered */
-      margin: '0 auto', /* Center the block element */
-      border: 'none' /* Replaces frameBorder="0" */
-    }}
-  />
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; display: block;"
+  ></iframe>
 </div>
 
 Firefox, the perennial champion of open-source and privacy-focused browsing, is
@@ -89,16 +91,6 @@ built entirely on open standards and transparent development. However, as
 catch-up in terms of certain modern web features and performance optimizations.
 While it's certainly a viable open-source option, I find myself wanting a
 slightly more cutting-edge experience for my daily browsing. Also, in the past year, funding has been an issue which puts Firefox in a precarious place.
-
-### ![Opera](https://avatars.githubusercontent.com/u/191904?s=48&v=4) Opera's Oddities
-
-Opera, with its sleek design and built-in VPN, seemed promising at first. While
-it leverages some open-source components, its overall direction and business
-model quickly became a concern. My experience was quickly soured by what felt
-like an aggressive push for financial services. The repeated attempts to sell
-me credit cards felt out of place for a web browser and ultimately made me to
-question its true intentions, veering away from the open and user-centric model
-I prefer.
 
 ### ![Zen](https://avatars.githubusercontent.com/u/165225155?s=48&v=4) Zen: A True Open-Source Spirit
 
@@ -176,4 +168,4 @@ the crown as my daily driver, primarily due to its strong privacy commitment (on
 customized to remove Web3 elements) and its efficient browsing experience. Zen
 remains a strong contender for its pure open-source spirit and excellent
 development features. But I know, deep down, that the search will continue. And
-that, in itself, is part of the fun. 
+that, in itself, is part of the fun.

@@ -1,8 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-import mdx from '@astrojs/mdx';
-
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
@@ -25,5 +23,5 @@ export default defineConfig({
     '/debian': 'https://raw.githubusercontent.com/Jaredy899/linux/refs/heads/main/config_changes/preseed.cfg',
   },
 
-  integrations: [mdx()]
+  integrations: []
 });

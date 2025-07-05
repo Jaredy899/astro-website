@@ -30,4 +30,4 @@ In a world that often feels chaotic and uncertain, the steady and thoughtful exa
 ---
 > *In the future, I'll explore specific episodes from all of Star Trek; usually a recent one that I've watched*.
 
---- 
+---

@@ -40,4 +40,4 @@ irm jaredcervantes.com/win | iex
 - **Nord Backgrounds**: Download and set up Nord-themed wallpapers
 - **Integration with [Chris Titus](https://christitus.com) Tech's [Windows Utility](https://github.com/ChrisTitusTech/winutil)**: Access additional applications and tweaks
 
-![Fastfetch](https://qmpdliftraf4pov3.public.blob.vercel-storage.com/fastfetch-open-mDaJBjxOzk9EQUd3Fkjh3kmd8kNjIb.webp) 
+![Fastfetch](https://qmpdliftraf4pov3.public.blob.vercel-storage.com/fastfetch-open-mDaJBjxOzk9EQUd3Fkjh3kmd8kNjIb.webp)
