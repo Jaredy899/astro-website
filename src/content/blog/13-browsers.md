@@ -160,6 +160,16 @@ testament to how a strong focus on privacy, combined with thoughtful design and
 useful features, can profoundly impact a user's choice, even when a bit of initial
 customization is required.
 
+### ![Helium](https://avatars.githubusercontent.com/u/152056268?s=48&v=4) Helium: The Experimental Frontier
+
+Recently, my curiosity led me to experiment with a new browser: [**Helium**](https://github.com/imputnet/helium-chromium.git), a very alpha-stage fork of Chromium. Helium is still in its early days, but its open-source foundation and willingness to break from the mainstream make it an intriguing project to watch.
+
+A couple of important caveats: **Helium is currently only available for Mac, and you have to build it from source yourself**—there are no pre-built binaries yet. This makes it a project best suited for tinkerers and developers who are comfortable with the command line and compiling software. And, obviously, since it’s not cross-platform right now, it doesn’t fit my need to seamlessly switch between operating systems.
+
+What sets Helium apart is its focus on stripping Chromium down to the essentials, aiming for a lightweight, privacy-respecting experience without the usual bloat. The project is still highly experimental—features are in flux, and stability can be hit or miss—but that’s part of the appeal for me. There’s a certain excitement in using a browser that’s on the cutting edge, even if it means dealing with the occasional bug or missing feature.
+
+**For now, Helium isn’t quite ready to be my daily driver, so I’m still relying on Brave for my day-to-day browsing.** Still, I’m keeping a close eye on Helium’s development. Its open approach and willingness to rethink browser fundamentals make it a promising addition to the ever-evolving landscape of web browsers. If you’re interested in tinkering or contributing, you can check out the project on [GitHub](https://github.com/imputnet/helium-chromium.git).
+
 ### The Never-Ending Story
 
 The quest for the perfect web browser is, perhaps, a never-ending one. Technology
