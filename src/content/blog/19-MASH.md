@@ -1,6 +1,6 @@
 ---
-title: "How M\*A\*S\*H—and Hawkeye Pierce—Shaped My Empathy as a Provider"
-description: "Reflections on M\*A\*S\*H, war, and the art of caring in mental health"
+title: 'How M*A*S*H—and Hawkeye Pierce—Shaped My Empathy as a Provider'
+description: 'Reflections on M*A*S*H, war, and the art of caring in mental health'
 pubDate: 2025-08-17
 draft: true
 ---
