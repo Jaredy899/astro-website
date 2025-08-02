@@ -19,7 +19,7 @@ Astro is the framework I’m using now, and it’s the one I plan to stick with.
 
 ---
 
-### 2. **Nuxt**: A Close Second
+### 2. **[Nuxt](https://nuxt.jaredcervantes.com)**: A Close Second
 
 ![Nuxt](https://avatars.githubusercontent.com/u/23360933?s=48&v=4)
 
@@ -27,7 +27,7 @@ I’ve always liked Vue, and Nuxt is a fantastic way to build with it. Nuxt can 
 
 ---
 
-### 3. **Hugo**: Blazing Fast, But Different
+### 3. **[Hugo](https://hugo.jaredcervantes.com)**: Blazing Fast, But Different
 
 ![Hugo](https://avatars.githubusercontent.com/u/29385237?s=48&v=4)
 
@@ -35,7 +35,7 @@ Hugo is in a league of its own. It’s a static site generator written in Go, an
 
 ---
 
-### 4. **Next.js**: Powerful, But Overkill
+### 4. **[Next.js](https://next.jaredcervantes.com)**: Powerful, But Overkill
 
 ![Next.js](https://avatars.githubusercontent.com/u/14985020?s=48&v=4)
 
@@ -43,7 +43,7 @@ Next.js is the Swiss Army knife of web frameworks. You can build anything with i
 
 ---
 
-### 5. **Svelte**: Close, But Not Quite
+### 5. **[Svelte](https://svelte.jaredcervantes.com)**: Close, But Not Quite
 
 ![Svelte](https://avatars.githubusercontent.com/u/23617963?s=48&v=4)
 
