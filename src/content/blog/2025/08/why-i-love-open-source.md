@@ -32,7 +32,7 @@ I’ve also started using Git more seriously for my own web projects. Whether I�
 
 Another big part of contributing to linutil has been learning how to write and use scripts. I’ve been exploring different Linux distributions, testing scripts across environments, and making sure everything works as expected. So far, I’ve tested on **Debian, Ubuntu, Arch, Fedora, openSUSE, Solus, Void, Alpine, and NixOS**. Testing is a huge part of the process—sometimes it feels like I spend more time testing than coding! But it’s worth it to make sure the tools are reliable for everyone.
 
-> I’ll be writing a [blog post](/blog/17-linux-distros) in the future sharing my thoughts and experiences with each of these distros, so stay tuned if you’re interested in how they compare!
+> I’ll be writing a [blog post](/blog/my-thoughts-on-different-linux-distros) in the future sharing my thoughts and experiences with each of these distros, so stay tuned if you’re interested in how they compare!
 
 ## Tools That Help: Cursor and Beyond
 

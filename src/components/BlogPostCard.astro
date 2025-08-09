@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { cleanSlug } from '../utils/slug';
 
 interface Props {
 	post: CollectionEntry<'blog'>;
@@ -25,7 +26,7 @@ const formatDate = (date: Date) => {
 };
 ---
 
-<a href={`/blog/${post.slug}`} class="blog-card-link" aria-label={`Read blog post: ${title}`} tabindex="0">
+<a href={`/blog/${cleanSlug(post.slug)}`} class="blog-card-link" aria-label={`Read blog post: ${title}`} tabindex="0">
 	<article class="blog-card">
 		<h2 class="blog-title">{title}</h2>
 		<p class="blog-desc">{description}</p>

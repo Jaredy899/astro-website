@@ -7,13 +7,14 @@
     "dev": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "organize:posts": "node scripts/organize-posts.mjs"
   },
   "dependencies": {
-    "@astrojs/vercel": "^8.2.3",
+    "@astrojs/vercel": "^8.2.5",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
-    "astro": "^5.12.5",
-    "pnpm": "^10.13.1"
+    "astro": "^5.12.8",
+    "pnpm": "^10.14.0"
   }
 }

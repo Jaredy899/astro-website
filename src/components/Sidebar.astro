@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { cleanSlug } from '../utils/slug';
 
 interface Props {
 	posts: CollectionEntry<'blog'>[];
@@ -69,8 +70,8 @@ const formatDate = (date: Date) => {
 						const formattedDate = formatDate(pubDate);
 						return (
 							<li>
-								<a 
-									href={`/blog/${post.slug}`}
+                                <a 
+                                    href={`/blog/${cleanSlug(post.slug)}`}
 									class="post-link"
 									aria-label={`${post.data.title} - Published on ${formattedDate}`}
 								>

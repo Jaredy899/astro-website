@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { cleanSlug } from '../../utils/slug';
 import Layout from '../../layouts/Layout.astro';
 import JCLogo from '../../components/JCLogo.astro';
 
@@ -7,10 +8,14 @@ export async function getStaticPaths() {
 	const posts = await getCollection('blog');
 	return posts
 		.filter(post => !post.data.draft)
-		.map((post) => ({
-			params: { slug: post.slug },
-			props: post,
-		}));
+		.flatMap((post) => {
+			const cleaned = cleanSlug(post.slug);
+			const base = [{ params: { slug: cleaned }, props: post }];
+			if (cleaned !== post.slug) {
+				base.push({ params: { slug: post.slug }, props: post });
+			}
+			return base;
+		});
 }
 
 const post = Astro.props;
