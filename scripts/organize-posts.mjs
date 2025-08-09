@@ -38,15 +38,20 @@ async function parseFrontmatter(filePath) {
   if (end === -1) return { raw, data: {} };
   const yaml = raw.slice(3, end).trim();
 
-  /** Very light YAML parsing for title and pubDate */
+  /** Very light YAML parsing for title, pubDate, draft */
   const data = {};
   const titleMatch = yaml.match(/\btitle\s*:\s*(.*)/);
   const pubDateMatch = yaml.match(/\bpubDate\s*:\s*(.*)/);
+  const draftMatch = yaml.match(/\bdraft\s*:\s*(.*)/i);
   if (titleMatch) {
     data.title = titleMatch[1].trim().replace(/^['"]|['"]$/g, '');
   }
   if (pubDateMatch) {
     data.pubDate = pubDateMatch[1].trim().replace(/^['"]|['"]$/g, '');
+  }
+  if (draftMatch) {
+    const val = draftMatch[1].trim().toLowerCase();
+    data.draft = val === 'true' || val === 'yes' || val === 'on' || val === '1';
   }
   return { raw, data };
 }
@@ -81,13 +86,32 @@ async function organize() {
     if (!file.endsWith('.md')) continue;
 
     const rel = path.relative(blogRoot, file);
-    // Skip files already in year/month structure
     const parts = rel.split(path.sep);
-    if (parts.length >= 3 && /^\d{4}$/.test(parts[0]) && /^\d{2}$/.test(parts[1])) {
+
+    const { data } = await parseFrontmatter(file);
+
+    // Handle drafts first: move to drafts folder regardless of current location (unless already there)
+    if (data.draft === true) {
+      if (parts[0] === 'drafts') continue; // already in drafts
+      const originalBase = path.basename(file, '.md');
+      const baseNoPrefix = stripPrefixes(originalBase);
+      const title = (data.title && data.title.trim()) || baseNoPrefix;
+      const normalized = toKebabCase(title);
+      const destDir = path.join(blogRoot, 'drafts');
+      await fs.mkdir(destDir, { recursive: true });
+      let destPath = path.join(destDir, `${normalized}.md`);
+      if (path.resolve(file) !== path.resolve(destPath)) {
+        destPath = await ensureUniquePath(destPath);
+        await fs.rename(file, destPath);
+        moved.push({ from: rel, to: path.relative(blogRoot, destPath) });
+      }
       continue;
     }
 
-    const { data } = await parseFrontmatter(file);
+    // For non-drafts: Skip files already in year/month structure
+    if (parts.length >= 3 && /^\d{4}$/.test(parts[0]) && /^\d{2}$/.test(parts[1])) {
+      continue;
+    }
     const pub = data.pubDate;
     const ym = pub ? getYearMonthFromDate(pub) : null;
     if (!ym) {
