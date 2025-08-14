@@ -12,7 +12,7 @@ Over the course of contributing to open source projects and testing scripts, I�
 
 ## Debian ![Debian](https://avatars.githubusercontent.com/u/1854028?s=48&v=4)
 
-Debian is solid and everywhere. It’s the base for so many other distributions, and you can always count on it to be stable. However, the base Debian system is often behind on package versions, which can be frustrating if you want the latest software.
+Debian is solid and everywhere. It’s the base for so many other distributions, and you can always count on it to be stable. However, the base Debian system is often behind on package versions, which can be frustrating if you want the latest software. Although the latest Debian 13 just came out so it does have a lot of newer packages, however they'll be outdated before too long.
 
 ---
 
