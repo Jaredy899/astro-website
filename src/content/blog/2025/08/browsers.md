@@ -1,7 +1,7 @@
 ---
 title: "The Endless Quest for the Perfect Browser: A Chronicle"
 description: "My ongoing search for the ideal web browser."
-pubDate: 2025-08-10
+pubDate: 2025-08-24
 draft: true
 ---
 

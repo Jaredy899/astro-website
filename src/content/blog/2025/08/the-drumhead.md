@@ -2,7 +2,7 @@
 title: "The Drumhead: A Cautionary Tale for Our Times"
 description: "How a classic Star Trek: TNG episode about a witch hunt reflects our current political climate."
 pubDate: 2025-08-17
-draft: true
+draft: false
 ---
 
 # The Drumhead: A Cautionary Tale for Our Times

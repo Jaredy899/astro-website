@@ -11,10 +11,10 @@
     "organize:posts": "node scripts/organize-posts.mjs"
   },
   "dependencies": {
-    "@astrojs/vercel": "^8.2.5",
+    "@astrojs/vercel": "^8.2.6",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
-    "astro": "^5.12.9",
+    "astro": "^5.13.2",
     "pnpm": "^10.14.0"
   }
 }
