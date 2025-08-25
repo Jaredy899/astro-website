@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import { cleanSlug } from '../../utils/slug';
 import Layout from '../../layouts/Layout.astro';
+import PostHogLayout from '../../layouts/PostHogLayout.astro';
 import JCLogo from '../../components/JCLogo.astro';
 
 export async function getStaticPaths() {
@@ -37,10 +38,10 @@ const formatDate = (date: Date) => {
 		timeZone: 'UTC'
 	});
 };
-
 ---
 
-<Layout title={title} description={description}>
+<PostHogLayout>
+  <Layout title={title} description={description}>
 	<main class="container mx-auto px-4 py-8">
 		<div class="logo-container" transition:name="jc-logo">
 			<a href="/" class="logo-link" aria-label="Return to home page">
@@ -56,9 +57,9 @@ const formatDate = (date: Date) => {
 			</div>
 		</article>
 	</main>
-</Layout>
+  </Layout>
 
-<script>
+  <script>
 	// Remove tabindex from pre elements and setup copy buttons
 	document.addEventListener('astro:page-load', () => {
 		// Remove tabindex
@@ -104,24 +105,24 @@ const formatDate = (date: Date) => {
 			});
 		});
 	});
-</script>
+  </script>
 
-<style>
+  <style>
 	.container {
 		max-width: 800px;
 	}
 
-/* Add specific tablet and desktop adjustments */
-@media screen and (min-width: 768px) and (max-width: 1280px) {
-  .container {
-    padding-left: 5rem !important; /* Add more padding on the left to account for sidebar */
-    padding-right: 2rem !important;
-  }
+	/* Add specific tablet and desktop adjustments */
+	@media screen and (min-width: 768px) and (max-width: 1280px) {
+	  .container {
+	    padding-left: 5rem !important; /* Add more padding on the left to account for sidebar */
+	    padding-right: 2rem !important;
+	  }
 
-  .blog-date {
-    margin-left: 0.5rem; /* Add some margin to the date */
-  }
-}
+	  .blog-date {
+	    margin-left: 0.5rem; /* Add some margin to the date */
+	  }
+	}
 
 	.logo-container {
 		width: 40px;
@@ -206,7 +207,7 @@ const formatDate = (date: Date) => {
 		box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
 	}
 
-
+	
 	.blog-content :global(h1) {
 		font-family: 'Inter', sans-serif;
 		font-size: 2rem;
@@ -334,4 +335,5 @@ const formatDate = (date: Date) => {
 	.blog-content :global(a:hover) {
 		opacity: 0.8;
 	}
-</style>
+  </style>
+</PostHogLayout>
