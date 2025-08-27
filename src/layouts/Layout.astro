@@ -52,29 +52,22 @@ const posts = allPosts.filter(post => !post.data.draft);
 </html>
 
 <script>
-	// --------- SIDEBAR TOGGLE ---------
-	const handleSidebarToggleClick = () => {
+	// Optimized sidebar functionality
+	const toggleSidebar = (open = null) => {
 		const sidebar = document.getElementById("sidebar");
 		const overlay = document.getElementById("sidebar-overlay");
-		
-		if (sidebar && overlay) {
-			const isOpen = sidebar.classList.contains('open');
-			
-			if (isOpen) {
-				sidebar.classList.remove('open');
-				overlay.classList.remove('active');
-			} else {
-				sidebar.classList.add('open');
-				overlay.classList.add('active');
-			}
-		}
-	};
 
-	const handleOverlayClick = () => {
-		const sidebar = document.getElementById("sidebar");
-		const overlay = document.getElementById("sidebar-overlay");
-		
-		if (sidebar && overlay) {
+		if (!sidebar || !overlay) return;
+
+		const isCurrentlyOpen = sidebar.classList.contains('open');
+
+		// If open is specified, use it; otherwise toggle
+		const shouldOpen = open !== null ? open : !isCurrentlyOpen;
+
+		if (shouldOpen) {
+			sidebar.classList.add('open');
+			overlay.classList.add('active');
+		} else {
 			sidebar.classList.remove('open');
 			overlay.classList.remove('active');
 		}
@@ -84,19 +77,31 @@ const posts = allPosts.filter(post => !post.data.draft);
 		const sidebarToggleButton = document.getElementById("sidebar-toggle");
 		const overlay = document.getElementById("sidebar-overlay");
 
-		if (sidebarToggleButton) {
-			sidebarToggleButton.removeEventListener("click", handleSidebarToggleClick);
-			sidebarToggleButton.addEventListener("click", handleSidebarToggleClick);
+		// Setup toggle button (only once)
+		if (sidebarToggleButton && !sidebarToggleButton.hasAttribute('data-sidebar-handler')) {
+			sidebarToggleButton.setAttribute('data-sidebar-handler', 'true');
+			sidebarToggleButton.addEventListener("click", () => toggleSidebar());
 		}
-		if (overlay) {
-			overlay.removeEventListener("click", handleOverlayClick);
-			overlay.addEventListener("click", handleOverlayClick);
+
+		// Setup overlay click (only once)
+		if (overlay && !overlay.hasAttribute('data-overlay-handler')) {
+			overlay.setAttribute('data-overlay-handler', 'true');
+			overlay.addEventListener("click", () => toggleSidebar(false));
 		}
 	};
 
+	// Make toggleSidebar available globally for other components
+	if (typeof window !== 'undefined') {
+		window.toggleSidebar = toggleSidebar;
+	}
+
 	// Run on initial load and after view transitions
 	if (typeof document !== 'undefined') {
-		setupSidebar();
+		if (document.readyState === 'loading') {
+			document.addEventListener('DOMContentLoaded', setupSidebar);
+		} else {
+			setupSidebar();
+		}
 		document.addEventListener('astro:page-load', setupSidebar);
 	}
 </script>

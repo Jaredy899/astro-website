@@ -91,32 +91,54 @@ const formatDate = (date: Date) => {
 </div>
 
 <script>
-	// Handle sidebar functionality
-	function initSidebar() {
-		const sidebar = document.getElementById('sidebar');
-		const overlay = document.getElementById('sidebar-overlay');
+	// Optimized sidebar close functionality
+	function setupSidebarClose() {
 		const closeBtn = document.getElementById('sidebar-close-btn');
+		const sidebar = document.getElementById('sidebar');
 
-		function closeSidebar() {
-			sidebar?.classList.remove('open');
-			overlay?.classList.remove('active');
+		// Close button click - use global toggleSidebar function
+		if (closeBtn && !closeBtn.hasAttribute('data-close-handler')) {
+			closeBtn.setAttribute('data-close-handler', 'true');
+			closeBtn.addEventListener('click', () => {
+				if (typeof window.toggleSidebar !== 'undefined') {
+					window.toggleSidebar(false);
+				} else {
+					// Fallback if global function not available
+					const sidebarEl = document.getElementById("sidebar");
+					const overlayEl = document.getElementById("sidebar-overlay");
+					sidebarEl?.classList.remove('open');
+					overlayEl?.classList.remove('active');
+				}
+			});
 		}
 
-		// Close button click
-		closeBtn?.addEventListener('click', closeSidebar);
-
-		// Close sidebar when clicking on post links
-		const postLinks = sidebar?.querySelectorAll('.post-link');
-		postLinks?.forEach(link => {
-			link.addEventListener('click', closeSidebar);
-		});
+		// Close sidebar when clicking on post links (event delegation)
+		if (sidebar && !sidebar.hasAttribute('data-link-handler')) {
+			sidebar.setAttribute('data-link-handler', 'true');
+			sidebar.addEventListener('click', (e) => {
+				if (e.target.closest('.post-link')) {
+					if (typeof window.toggleSidebar !== 'undefined') {
+						window.toggleSidebar(false);
+					} else {
+						// Fallback
+						const sidebarEl = document.getElementById("sidebar");
+						const overlayEl = document.getElementById("sidebar-overlay");
+						sidebarEl?.classList.remove('open');
+						overlayEl?.classList.remove('active');
+					}
+				}
+			});
+		}
 	}
 
 	// Initialize when DOM is loaded
-	if (document.readyState === 'loading') {
-		document.addEventListener('DOMContentLoaded', initSidebar);
-	} else {
-		initSidebar();
+	if (typeof document !== 'undefined') {
+		if (document.readyState === 'loading') {
+			document.addEventListener('DOMContentLoaded', setupSidebarClose);
+		} else {
+			setupSidebarClose();
+		}
+		document.addEventListener('astro:page-load', setupSidebarClose);
 	}
 </script>
 

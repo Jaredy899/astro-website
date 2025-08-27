@@ -2,7 +2,6 @@
   "name": "astro-website",
   "type": "module",
   "version": "0.0.1",
-  "packageManager": "pnpm@10.14.0",
   "scripts": {
     "dev": "astro dev --host",
     "build": "astro build",
@@ -14,7 +13,6 @@
     "@astrojs/vercel": "^8.2.6",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
-    "astro": "^5.13.2",
-    "pnpm": "^10.14.0"
+    "astro": "^5.13.3"
   }
 }
