@@ -6,13 +6,13 @@ A simple personal website built with Astro.
 
 ```bash
 # Install dependencies
-pnpm install
+bun install
 
 # Start development server
-pnpm dev
+bun dev
 
 # Build for production
-pnpm build
+bun build
 ```
 
 ## Features
