@@ -26,6 +26,8 @@ Ubuntu is based on Debian but is more up-to-date. It’s probably the most popul
 
 Arch is the definition of bleeding edge. It has all the packages you could ever want, and with the AUR (Arch User Repository), you can install just about anything. I use it on a spare laptop for tinkering. The downside is that it’s easy to break if you’re not careful, especially with frequent updates.
 
+By the way, I've installed a spin on Arch called [Omarchy by DHH](https://omarchy.org/). It's pretty amazing and makes using Arch pretty easy and fun.
+
 ---
 
 ## Fedora ![Fedora](https://avatars.githubusercontent.com/u/3316637?s=48&v=4)

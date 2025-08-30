@@ -7,7 +7,7 @@ draft: true
 
 # Open Source
 
-Over the past few months, I’ve been diving deep into the world of open source by contributing to [Linutil](https://github.com/ChrisTitusTech/linutil.git), a project by Chris Titus Tech. This experience has been a fantastic way to learn not just about the code itself, but also about the tools and workflows that make open source possible. I've even made my own [fork](https://github.com/Jaredy899/jaredlinutil.git) that I maintain.
+Over the past few months, I’ve been diving deep into the world of open source by contributing to [Linutil](https://github.com/ChrisTitusTech/linutil.git), a project by Chris Titus Tech. This experience has been a fantastic way to learn not just about the code itself, but also about the tools and workflows that make open source possible.
 
 ## Why I Love Open Source
 
