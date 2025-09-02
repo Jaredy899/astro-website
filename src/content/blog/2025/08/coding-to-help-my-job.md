@@ -44,6 +44,8 @@ For the complex calculations, like determining the next quarterly review date or
 
 ### The Result: A Tailored Case Management Tool for Compliance
 
+![CM](https://qmpdliftraf4pov3.public.blob.vercel-storage.com/Screenshot%202025-09-02%20131215.png)
+
 With Convex Chef providing the powerful, real-time backend and Cursor acting as my intelligent coding assistant, I was able to build a functional and incredibly useful case management website. My custom solution now:
 
 * **Tracks Consumers:** A clean interface allows me to add and manage all my consumer information.
