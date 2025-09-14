@@ -1,8 +1,8 @@
 ---
 title: "Why *Frasier* Still Holds Up After 30 Years"
 description: "A look at the wit, characters, and timeless comedy that make *Frasier* endure."
-pubDate: 2025-08-28
-draft: true
+pubDate: 2025-09-14
+draft: false
 ---
 # Why *Frasier* Still Holds Up
 
