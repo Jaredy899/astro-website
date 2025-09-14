@@ -1,5 +1,5 @@
 ---
-title: "Why *Frasier* Still Holds Up After 30 Years"
+title: "Why Frasier Still Holds Up After 30 Years"
 description: "A look at the wit, characters, and timeless comedy that make *Frasier* endure."
 pubDate: 2025-09-14
 draft: false
@@ -30,7 +30,7 @@ If Frasier is dramatic, Niles is meticulous. His fastidiousness and unspoken lov
 
 ## Daphne Moon
 
-![Daphne and Niles dancing](https://static.wikia.nocookie.net/frasier/images/b/b3/Stills-03x13-Moon-Dance-02-Daphne-Niles.jpg/revision/latest?cb=20161225022605)
+![Daphne and Niles dancing](https://pbs.twimg.com/media/GFq50nFXEAA3Uuo?format=jpg&name=small)
 
 Daphne brings warmth and eccentricity to the Crane household. As Martin’s live-in physical therapist, she grounds the show with her quirky stories and down-to-earth perspective. Her relationship with Niles is one of the most rewarding long arcs in sitcom history, and her presence balances out the Crane brothers’ pretentiousness. Episodes like *Moon Dance* remind us how central she is to the emotional core of the show, even when the comedy is at its sharpest.
 
