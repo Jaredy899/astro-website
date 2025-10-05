@@ -1,13 +1,13 @@
 ---
 title: "Why I Love Open Source"
 description: "My experience contributing to linutil and learning Git."
-pubDate: 2025-08-17
-draft: true
+pubDate: 2025-10-04
+draft: false
 ---
 
 # Open Source
 
-Over the past few months, I’ve been diving deep into the world of open source by contributing to [Linutil](https://github.com/ChrisTitusTech/linutil.git), a project by Chris Titus Tech. This experience has been a fantastic way to learn not just about the code itself, but also about the tools and workflows that make open source possible.
+Over the past few months, I’ve been diving deep into the world of open source by contributing to [Linutil](https://github.com/ChrisTitusTech/linutil.git), a project by Chris Titus Tech, as well as other projects. This experience has been a fantastic way to learn not just about the code itself, but also about the tools and workflows that make open source possible.
 
 ## Why I Love Open Source
 
@@ -32,7 +32,7 @@ I’ve also started using Git more seriously for my own web projects. Whether I�
 
 Another big part of contributing to linutil has been learning how to write and use scripts. I’ve been exploring different Linux distributions, testing scripts across environments, and making sure everything works as expected. So far, I’ve tested on **Debian, Ubuntu, Arch, Fedora, openSUSE, Solus, Void, Alpine, and NixOS**. Testing is a huge part of the process—sometimes it feels like I spend more time testing than coding! But it’s worth it to make sure the tools are reliable for everyone.
 
-> I’ll be writing a [blog post](/blog/distros) in the future sharing my thoughts and experiences with each of these distros, so stay tuned if you’re interested in how they compare!
+My past [blog post](/blog/distros) shared my thoughts and experiences with each of these distros.
 
 ## Tools That Help: Cursor and Beyond
 
