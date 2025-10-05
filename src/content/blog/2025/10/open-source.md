@@ -1,7 +1,7 @@
 ---
 title: "Why I Love Open Source"
 description: "My experience contributing to linutil and learning Git."
-pubDate: 2025-10-04
+pubDate: 2025-10-05
 draft: false
 ---
 
