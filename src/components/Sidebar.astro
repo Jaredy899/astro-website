@@ -100,8 +100,8 @@ const formatDate = (date: Date) => {
 		if (closeBtn && !closeBtn.hasAttribute('data-close-handler')) {
 			closeBtn.setAttribute('data-close-handler', 'true');
 			closeBtn.addEventListener('click', () => {
-				if (typeof window.toggleSidebar !== 'undefined') {
-					window.toggleSidebar(false);
+				if (typeof (window as any).toggleSidebar !== 'undefined') {
+					(window as any).toggleSidebar(false);
 				} else {
 					// Fallback if global function not available
 					const sidebarEl = document.getElementById("sidebar");
@@ -116,9 +116,9 @@ const formatDate = (date: Date) => {
 		if (sidebar && !sidebar.hasAttribute('data-link-handler')) {
 			sidebar.setAttribute('data-link-handler', 'true');
 			sidebar.addEventListener('click', (e) => {
-				if (e.target.closest('.post-link')) {
-					if (typeof window.toggleSidebar !== 'undefined') {
-						window.toggleSidebar(false);
+				if (e.target && (e.target as Element).closest('.post-link')) {
+					if (typeof (window as any).toggleSidebar !== 'undefined') {
+						(window as any).toggleSidebar(false);
 					} else {
 						// Fallback
 						const sidebarEl = document.getElementById("sidebar");
