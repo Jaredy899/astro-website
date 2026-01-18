@@ -16,6 +16,8 @@
     "astro": "^5.16.4"
   },
   "trustedDependencies": [
-    "@vercel/speed-insights"
+    "@vercel/speed-insights",
+    "esbuild",
+    "sharp"
   ]
 }
