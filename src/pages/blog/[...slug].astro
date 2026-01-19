@@ -41,12 +41,36 @@ const formatDate = (date: Date) => {
 ---
 
 <Layout title={title} description={description}>
-	<main class="container mx-auto px-4 py-8">
+	<header class="page-header" id="page-header">
+		<button id="header-sidebar-toggle" aria-label="Toggle sidebar">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+				<line x1="8" y1="6" x2="8" y2="18"></line>
+			</svg>
+		</button>
 		<div class="logo-container" transition:name="jc-logo">
 			<a href="/" class="logo-link" aria-label="Return to home page">
 				<JCLogo />
 			</a>
 		</div>
+		<button id="header-theme-toggle" aria-label="Toggle dark mode">
+			<svg id="header-sun-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<circle cx="12" cy="12" r="5"></circle>
+				<line x1="12" y1="1" x2="12" y2="3"></line>
+				<line x1="12" y1="21" x2="12" y2="23"></line>
+				<line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+				<line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+				<line x1="1" y1="12" x2="3" y2="12"></line>
+				<line x1="21" y1="12" x2="23" y2="12"></line>
+				<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+				<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+			</svg>
+			<svg id="header-moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+			</svg>
+		</button>
+	</header>
+	<main class="container mx-auto px-4 py-8 blog-main">
 		<article class="prose dark:prose-invert mx-auto fade-in blog-post">
 			<time class="text-sm text-gray-500 dark:text-gray-400 blog-date">
 				{formatDate(new Date(pubDate))}
@@ -57,6 +81,99 @@ const formatDate = (date: Date) => {
 		</article>
 	</main>
 </Layout>
+
+<script>
+	// Blog header scroll behavior and controls
+	const setupBlogHeader = () => {
+		let lastScrollY = 0;
+		const header = document.getElementById('page-header');
+		const headerSidebarToggle = document.getElementById('header-sidebar-toggle');
+		const headerThemeToggle = document.getElementById('header-theme-toggle');
+		const headerSunIcon = document.getElementById('header-sun-icon');
+		const headerMoonIcon = document.getElementById('header-moon-icon');
+		
+		if (!header) return;
+		
+		const handleScroll = () => {
+			const currentScrollY = window.scrollY;
+			
+			if (currentScrollY < 100) {
+				header.classList.remove('header-hidden');
+			} else if (currentScrollY > lastScrollY) {
+				header.classList.add('header-hidden');
+			} else {
+				header.classList.remove('header-hidden');
+			}
+			
+			lastScrollY = currentScrollY;
+		};
+		
+		window.addEventListener('scroll', handleScroll, { passive: true });
+		
+		// Setup header sidebar toggle
+		if (headerSidebarToggle && !headerSidebarToggle.hasAttribute('data-header-handler')) {
+			headerSidebarToggle.setAttribute('data-header-handler', 'true');
+			headerSidebarToggle.addEventListener('click', () => {
+				if (typeof (window as any).toggleSidebar === 'function') {
+					(window as any).toggleSidebar();
+				}
+			});
+		}
+		
+		// Sync header theme icons with current theme
+		const syncHeaderThemeIcons = () => {
+			const isDark = document.documentElement.classList.contains('dark');
+			if (isDark) {
+				headerSunIcon?.classList.remove('hidden');
+				headerMoonIcon?.classList.add('hidden');
+			} else {
+				headerSunIcon?.classList.add('hidden');
+				headerMoonIcon?.classList.remove('hidden');
+			}
+		};
+		
+		// Initial sync
+		syncHeaderThemeIcons();
+		
+		// Setup header theme toggle
+		if (headerThemeToggle && !headerThemeToggle.hasAttribute('data-header-theme-handler')) {
+			headerThemeToggle.setAttribute('data-header-theme-handler', 'true');
+			headerThemeToggle.addEventListener('click', () => {
+				const element = document.documentElement;
+				const isDark = element.classList.toggle('dark');
+				const theme = isDark ? 'dark' : 'light';
+				
+				if (typeof localStorage !== 'undefined') {
+					localStorage.setItem('theme', theme);
+				}
+				
+				// Sync header icons
+				syncHeaderThemeIcons();
+				
+				// Also sync main theme toggle icons
+				const sunIcon = document.getElementById('sun-icon');
+				const moonIcon = document.getElementById('moon-icon');
+				if (isDark) {
+					sunIcon?.classList.remove('hidden');
+					moonIcon?.classList.add('hidden');
+				} else {
+					sunIcon?.classList.add('hidden');
+					moonIcon?.classList.remove('hidden');
+				}
+			});
+		}
+	};
+	
+	// Run on initial load and after view transitions
+	if (typeof document !== 'undefined') {
+		if (document.readyState === 'loading') {
+			document.addEventListener('DOMContentLoaded', setupBlogHeader);
+		} else {
+			setupBlogHeader();
+		}
+		document.addEventListener('astro:page-load', setupBlogHeader);
+	}
+</script>
 
 
 
@@ -76,6 +193,78 @@ const formatDate = (date: Date) => {
     margin-left: 0.5rem; /* Add some margin to the date */
   }
 }
+
+	/* Blog Page Header */
+	.page-header {
+		position: fixed;
+		top: 1rem;
+		left: 1rem;
+		right: 1rem;
+		z-index: 10;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		transition: transform 0.3s ease;
+	}
+
+	.page-header.header-hidden {
+		transform: translateY(-100%);
+	}
+
+	.page-header .logo-container {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 60px;
+		height: 60px;
+		color: var(--text);
+		margin: 0;
+		top: auto;
+	}
+
+	.page-header .logo-link {
+		display: block;
+		width: 100%;
+		height: 100%;
+		color: inherit;
+		text-decoration: none;
+		transition: opacity 0.2s ease, transform 0.2s ease;
+	}
+
+	.page-header .logo-link:hover {
+		opacity: 0.8;
+		transform: scale(1.05);
+	}
+
+	#header-sidebar-toggle,
+	#header-theme-toggle {
+		padding: 0.25rem;
+		border-radius: 50%;
+		border: none;
+		background: transparent;
+		color: var(--text);
+		cursor: pointer;
+		transition: transform 0.3s ease;
+	}
+
+	#header-sidebar-toggle:hover,
+	#header-theme-toggle:hover {
+		transform: scale(1.1);
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	.blog-main {
+		padding-top: 6rem;
+	}
+
+	/* Hide global controls on blog pages when page-header is present */
+	:global(body:has(.page-header) > #sidebar-toggle),
+	:global(body:has(.page-header) > #theme-toggle) {
+		display: none !important;
+	}
 
 	.logo-container {
 		width: 40px;
